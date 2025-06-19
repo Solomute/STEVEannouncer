@@ -1,0 +1,107 @@
+
+* This information is protected under the United States copyright 
+* laws. THAT Corporation ("THAT") hereby grants users of this 
+* macromodel (the "User"), a nonexclusive, nontransferable 
+* license to use this macromodel as long as the licensee abides
+* by the terms of this agreement.  Before using the macromodel,
+* the User should read this license.  If the User does not accept
+* these terms, the macromodel contained herein should be erased, 
+* destroyed or returned to THAT within 30 days.
+*
+* The User may copy and distribute, at no charge, verbatim copies
+* of the Macromodel as contained herein, in any medium, provided 
+* that the User conspicuously publishes on each copy this copyright 
+* notice and disclaimer of warranty.  The User may modify this
+* macromodel to suit his or her specific applications, and the User
+* may make copies of the modified macromodel for use within his or  
+* her company only, and provided the modified files carry prominent 
+* notices stating that the files have been changed, and the date of 
+* any changes.
+* 
+* This macromodel is provided "AS IS, WHERE IS, AND WITH NO WARRANTY
+* OF ANY KIND EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED
+* TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+* PARTICULAR PURPOSE."  In no event will THAT be liable for special,
+* collateral, incidental, or consequential damages in connection
+* with or arising out of the use of this macromodel.  THAT reserves
+* the right to make changes to the products and macromodel without
+* prior notice.
+* ======================================================================== 
+* THAT2162 VCA MACROMODEL
+* Rev. 00 1-13-2015
+* Model by GKH
+* Rev 01 JBL 5-10-17
+* Changed subckt name to THAT2162
+* Rev 02 RB 6-7-17
+* Dual VCA in one subcircuit
+* Rev 03 RB 6-8-2017
+* Dual VCA with one VCA model
+*
+.SUBCKT THAT2162 IN1 EC+1 EC-1 SYM1 OUT1 IN2 EC+2 EC-2 SYM2 OUT2 V+ GND V-
+X_X1      IN1 EC+1 EC-1 V+ GND V- SYM1 OUT1 THAT2162_VCA
+X_X2      IN2 EC+2 EC-2 V+ GND V- SYM2 OUT2 THAT2162_VCA
+.ENDS
+*
+*
+*THAT2162 VCA macromodel
+*
+.SUBCKT THAT2162_VCA IN EC+ EC- V+ GND V- SYM OUT
+R_R11         22 20  30  
+R_R9          Ec+ SYM  30  
+Q_Q35         20 22 24 QNPNNOM 
+Q_Q42         30 30 31 QNPNNOM 
+I_Isym        0 SYM DC 5.8uA  
+Q_Q43         0 0 31 QPNPNOM 
+I_I1          10 V- DC 7.5uA  
+E_E1          20 28 30 0 2
+Q_Q39         28 28 27 QPNPNOM 
+Q_Q40         IN Ec+ 23 QPNPNOM 
+Q_Q34         IN 25 26 QNPNNOM 
+R_R36         V- 28  100Meg  
+Q_Q38         28 28 26 QPNPNOM 
+Q_Q41         OUT Ec- 24 QPNPNOM 
+R_R10         Ec- 25  30  
+R_R12         21 20  30  
+R_R34         11 V+  15k  
+R_R29         GND 33  25Meg  
+C_C7          GND 35  5pF  
+R_R38         GND 35  15k  
+Q_Q36         OUT SYM 27 QNPNNOM 
+R_R35         12 V+  15k  
+Q_Q33         12 9 10 QNHIB 
+Q_Q37         20 21 23 QNPNNOM 
+V_Vos         9 GND DC -6.8mV  
+C_C4          34 33  15pF  
+C_C3          20 0  4.7pF  
+R_R7          19 V+  400  
+R_R37         35 34  2.5k  
+D_D1          32 V+ DNOM 
+D_D2          GND 36 DNOM 
+I_I3          V+ $N_0001 DC 190uA  
+Q_Q32         11 IN 10 QNHIB 
+I_I4          V+ $N_0002 DC 190uA  
+G_G1          V+ 33 11 12 66.6e-6
+G_G2          19 20 33 GND 2.3e-3
+G_G3          28 V- 40 V- 100e-6
+D_D4          $N_0002 V- DNOM 
+D_D3          $N_0001 V- DNOM 
+I_I5          28 V- DC 890uA  
+I_I6          20 28 DC 130uA  
+V_V1          32 33 DC 1.4V  
+V_V2          33 36 DC .7V  
+V_V3          GND 40 DC 1.8V  
+G_G4          IN GND $N_0001 $N_0002 5e-4
+I_I2          0 30 DC 25uA
+*
+*  Devices for 2162 Macromodel 
+****************************************************************************
+.model DNOM D Is=1e-14 Cjo=.1pF Rs=.1
+*
+.model QNHIB NPN BF=1230 
+*
+.model QNPNNOM NPN IS=1e-15 BF=150 VAF=150 RB=55 CJC=1.85pF
+*
+.model QPNPNOM PNP IS=1e-15 BF=75 VAF=80 RB=50 CJC=2.2pF
+****************************************************************************
+*
+.ENDS

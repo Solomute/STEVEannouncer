@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "PCB")(type "KiCad")(uri "E:/Github/STEVEannouncer/PCB")(options "")(descr ""))
+  (lib (name "STEVEannouncer")(type "KiCad")(uri "${KIPRJMOD}/STEVEannouncer.pretty")(options "")(descr ""))
+)
