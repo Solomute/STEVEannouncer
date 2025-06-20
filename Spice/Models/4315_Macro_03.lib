@@ -1,0 +1,168 @@
+*
+* This information is protected under the United States copyright 
+* laws. THAT Corporation ("THAT") hereby grants users of this 
+* macromodel (the "User"), a nonexclusive, nontransferable 
+* license to use this macromodel as long as the licensee abides
+* by the terms of this agreement.  Before using the macromodel,
+* the User should read this license.  If the User does not accept
+* these terms, the macromodel contained herein should be erased, 
+* destroyed or returned to THAT within 30 days.
+*
+* The User may copy and distribute, at no charge, verbatim copies
+* of the Macromodel as contained herein, in any medium, provided 
+* that the User conspicuously publishes on each copy this copyright 
+* notice and disclaimer of warranty.  The User may modify this
+* macromodel to suit his or her specific applications, and the User
+* may make copies of the modified macromodel for use within his or  
+* her company only, and provided the modified files carry prominent 
+* notices stating that the files have been changed, and the date of 
+* any changes.
+* 
+* This macromodel is provided "AS IS, WHERE IS, AND WITH NO WARRANTY
+* OF ANY KIND EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED
+* TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+* PARTICULAR PURPOSE."  In no event will THAT be liable for special,
+* collateral, incidental, or consequential damages in connection
+* with or arising out of the use of this macromodel.  THAT reserves
+* the right to make changes to the products and macromodel without
+* prior notice.
+*
+*
+* Rev 03 RB 16-6-17
+* All in one subcircuit:
+.SUBCKT THAT4315 RMS_IN CT RMS_OUT VCA_IN VCA_OUT EC- EC+ V+ VREF GND FILT
+X_X1      RMS_IN CT RMS_OUT VREF GND V+ 4315RMS
+X_X2      VCA_IN VCA_OUT EC- EC+ V+ GND VREF 4315VCA
+X_X3      FILT V+ GND 4315REF
+.ENDS
+*
+*
+*THAT4315 RMS MACROMODEL
+*REV 00 6-24-2014
+*CONNECTIONS:
+*	             input current
+*		     |      timing capacitor
+*		     |      |  output voltage
+*		     |      |  |       reference voltage
+*		     |      |  |       |    ground
+*		     |      |  |       |    |   positive power supply
+*		     |      |  |       |    |   |
+.SUBCKT 4315RMS RMS_IN CT RMS_OUT VREF GND VCC
+*
+Q_Q6         2 1 RMS_IN QPNPRMS 
+Q_Q10        3 3 4 QPNPRMS 
+F_F5         CT GND VF_F5 1
+VF_F5        5 GND 0V
+F_F3         6 GND VF_F3 1
+VF_F3        2 GND 0V
+F_F4         VCC 7 VF_F4 1
+VF_F4        VCC 6 0V
+I_I1         8 GND DC 3.2uA  
+F_F2         VCC 2 VF_F2 1
+VF_F2        VCC 9 0V
+Q_Q9         VCC 0 4 QNPNRMS 
+Q_Q3         9 10 RMS_IN QNPNRMS 
+E_E1         VCC 10 VCC 11 1
+G_G1         11 0 12 13 6.154e-6
+R_R1         0 11  22Meg  
+I_I2         14 5 DC 7.5uA  
+Q_Q1         13 RMS_IN 8 QNPNRMS 1
+R_R4         12 VCC  162.5k  
+R_R3         13 VCC  162.5k  
+C_C1         0 11  4pF  
+E_E2         10 1 0 3 1
+E_E3         15 16 VCC 14 1
+E_E5         RMS_OUT 15 CT 15 1
+Q_Q2         12 VREF 8 QNPNRMS 1
+E_E6         15 0 VREF 0 1
+Q_Q4         7 17 18 QNPNRMS 4
+Q_Q7         19 16 18 QPNPRMS 4
+Q_Q5         14 14 VCC QPNPRMS 4
+R_R6         17 7  700  
+R_R7         19 16  700  
+E_E4         20 15 7 15 1
+Q_Q8         VCC 20 CT QNPNRMS 4
+I_I4         3 GND DC 40nA
+I_I5	     VCC GND 370uA
+.MODEL QNPNRMS NPN IS=1e-15 BF=200 VAF=800 CJC=.19pF RB=220
+.MODEL QPNPRMS PNP IS=1e-15 BF=75 VAF=80 CJC=.53pF RB=205
+.ENDS
+*
+*THAT4315 VCA MACROMODEL
+*REV 00 6-24-2014
+*CONNECTIONS:
+*	             input current
+*		     |      output current
+*		     |      |       negative control voltage
+*		     |      |       |   positive control voltage    
+*		     |      |       |   |   positive power supply
+*		     |      |       |   |   |   ground
+*		     |      |       |   |   |   |   reference voltage   
+*		     | 	    |       |   |   |   |   |
+.SUBCKT 4315VCA VCA_IN VCA_OUT EC- EC+ VCC GND VREF
+*
+R_R11        22 20  30  
+R_R9         EC+ 34  30  
+Q_Q35        20 22 24 QNPNVCA 
+Q_Q42        30 30 31 QNPNVCA 
+V_V6         1 2 DC 1.4V  
+D_D5         1 VCC DNOM 
+Q_Q43        0 0 31 QPNPVCA 
+Q_Q33        12 9 10 QNHIB 
+V_V7         2 3 DC .7V  
+I_I1         10 GND DC 7.0uA  
+G_G7         28 GND 40 GND 100e-6
+E_E1         20 28 30 0 2
+Q_Q39        28 28 27 QPNPVCA 
+Q_Q36        VCA_OUT 34 27 QNPNVCA 
+R_R36        GND 28  100Meg  
+Q_Q38        28 28 26 QPNPVCA 
+I_I9         20 28 DC 130uA  
+Q_Q41        VCA_OUT EC- 24 QPNPVCA 
+V_V5         VREF 40 DC 1.8V  
+R_R10        EC- 25  30  
+V_Vos        9 VREF DC 3mV  
+D_D6         VREF 3 DNOM 
+C_C3         20 0  4.7pF  
+R_R12        21 20  30  
+G_G5         VCC 2 11 12 33.65e-6
+R_R35        12 VCC  15k  
+R_R34        11 VCC  15k    
+R_R29        VREF 2  25Meg  
+G_G6         VCC 20 2 VREF 2.3e-3
+C_C4         VREF 2 16pF    
+Q_Q37        20 21 23 QNPNVCA 
+I_I8         28 GND DC 910uA  
+I_I10        VCC 6 DC 100uA  
+D_D7         6 GND DNOM 
+I_I11        VCC 7 DC 100uA  
+D_D8         7 GND DNOM 
+Q_Q40        VCA_IN EC+ 23 QPNPVCA 
+Q_Q34        VCA_IN 25 26 QNPNVCA 
+Q_Q32        11 VCA_IN 10 QNHIB 
+G_G8         VCA_IN GND 6 7 40e-5
+I_I2         0 30 DC 22uA  
+I_Isym       0 34 DC 4.4uA
+.model DNOM D Is=1e-14 Cjo=.1pF Rs=.1
+.model QNHIB NPN BF=2000
+.model QNPNVCA NPN IS=5e-16 BF=150 VAF=150 RB=45 CJC=1.0pF
+.model QPNPVCA PNP IS=5e-16 BF=75 VAF=100 RB=100 CJC=1.1pF
+.ENDS
+*
+*THAT4315 VREF DIVIDER MACROMODEL
+*REV 00 6-24-2014
+*CONNECTIONS:
+*    	              Vcc/2 filter
+*		      |    positive supply voltage
+*		      |    |   ground
+*	              |    |   |
+.SUBCKT 4315REF FILT VCC GND
+Q_Q1	Vcc Vcc 1 QNPNNOM
+Q_Q2	1 1 2 QNPNNOM
+R_R1	2 FILT 20K
+R_R3	FILT 3 20K
+Q_Q3	3 3 4 QNPNNOM
+Q_Q4	4 4 GND QNPNNOM
+.MODEL QNPNNOM NPN IS=1e-15 BF=200 VAF=800 CJC=.19pF
+.ENDS
+*

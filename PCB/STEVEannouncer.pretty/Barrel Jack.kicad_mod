@@ -1,0 +1,104 @@
+(footprint "Barrel Jack"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.1 -2.9 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "ddb3c21c-852f-4cd7-99dc-f41c607fd56e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Barrel Jack"
+		(at 0 6.59 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "826b9145-facd-495e-ad99-aa43456b7dd2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c013f43b-8d24-44bb-b230-0fa4e0060189")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "11f9d709-14d7-4dbf-994f-3c5c30f987a8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5 13.94)
+		(end 5 13.94)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "d71cd919-a5fd-44e5-9c1f-315ccc43d92d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "9190f30d-531e-4f69-8e05-a088f89a0d43")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -3.3 0)
+		(size 3.7 3.7)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "2c613c80-60f1-4880-83dd-80a307ac1678")
+	)
+	(pad "2" thru_hole circle
+		(at 0 5.59)
+		(size 3.7 3.7)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "161e3aa3-e977-49c5-907b-fea8e5f93491")
+	)
+	(pad "3" thru_hole circle
+		(at 3.3 0)
+		(size 3.7 3.7)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "0cd45d56-8340-4752-8755-c1c7108326d5")
+	)
+	(embedded_fonts no)
+)

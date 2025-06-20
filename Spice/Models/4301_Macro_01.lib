@@ -1,0 +1,300 @@
+*
+* This information is protected under the United States copyright
+* laws. THAT Corporation ("THAT") hereby grants users of this
+* macromodel (the "User"), a nonexclusive, nontransferable
+* license to use this macromodel as long as the licensee abides
+* by the terms of this agreement.  Before using the macromodel,
+* the User should read this license.  If the User does not accept
+* these terms, the macromodel contained herein should be erased,
+* destroyed or returned to THAT within 30 days.
+*
+* The User may copy and distribute, at no charge, verbatim copies
+* of the Macromodel as contained herein, in any medium, provided
+* that the User conspicuously publishes on each copy this copyright
+* notice and disclaimer of warranty.  The User may modify this
+* macromodel to suit his or her specific applications, and the User
+* may make copies of the modified macromodel for use within his or
+* her company only, and provided the modified files carry prominent
+* notices stating that the files have been changed, and the date of
+* any changes.
+*
+* This macromodel is provided "AS IS, WHERE IS, AND WITH NO WARRANTY
+* OF ANY KIND EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED
+* TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+* PARTICULAR PURPOSE."  In no event will THAT be liable for special,
+* collateral, incidental, or consequential damages in connection
+* with or arising out of the use of this macromodel.  THAT reserves
+* the right to make changes to the products and macromodel without
+* prior notice.
+*
+*THAT4301 MACROMODEL
+*REV 01 RB 6-8-2017
+*All in one subcircuit:
+.SUBCKT THAT4301 VCA_IN EC+ EC- SYM VCA_OUT V+ V- GND +In1 -In1 OUT1 +In2 -In2 OUT2 OUT3 RMS_IN IT CT RMS_OUT
+X_X1      VCA_IN EC+ EC- SYM V+ V- VCA_OUT GND 4301VCA
+X_X2      +In1 -In1 V+ V- OUT1 4301OA1
+X_X3      +In2 -In2 V+ V- OUT2 4301OA2
+X_X4      GND VCA_OUT V+ V- OUT3 4301OA3
+X_X5      RMS_IN IT CT RMS_OUT V- V+ GND 4301RMS
+.ENDS
+*
+*========================================================================
+*
+*CONNECTIONS:
+*	        Iin - Current Input
+*	        |         Ec+ - Positive Control Port
+*	        |         |      Ec- - Negative Control Port
+*	        |         |      |      Sym - Symmetry Adjust Terminal
+* 	        |         |      |      |      Vcc - Positive Supply Voltage
+* 	        |         |      |      |      |     Vee - Negative Supply Voltage
+*	        |         |      |      |      |     |     Iout - Current Output
+*	        |         |      |      |      |     |     |         GND
+*  	        |         |      |      |      |     |     |         |
+.SUBCKT 4301VCA P17    P15    P16    P14    P11    P10    P13   P9
+*
+J1 3 P17 1 FET 4
+J2 4 P9 2 FET 4
+CIN P17 P10 50pF
+RS1 1 7 2.4K
+RS2 2 7 2.4K
+I1 P11 7 120uA
+C2 3 4 20pF
+RD1 3 P10 1K
+RD2 4 P10 1K
+GA P11 8 4 3 .001
+RC1 8 0 12.6MEG
+CC 8 5 55pF
+RC2 5 P10 3K
+EA P11 9 8 0 1
+RA 9 10 820
+CZ 9 10 300pF
+Q1 10 10 11 QNPN
+Q2 10 10 12 QNPN
+RE1 11 13 1
+RE2 12 14 0.9
+Q3 P17 P15 13 QPNP
+Q4 P13 P16 14 QPNP
+Q5 P17 P16 15 QNPN
+Q6 P13 P14 16 QNPN
+RE3 15 17 1
+RE4 16 18 0.9
+Q7 19 19 17 QPNP
+Q8 19 19 18 QPNP
+COUT P13 0 35pF
+I2 19 P10 6mA
+IBIAS 0 6 30uA
+Q9 6 6 20 QNPN
+Q10 0 0 20 QPNP
+EBIAS 10 19 6 0 2
+.MODEL FET PJF(VTO=-1.46 BETA=1.67E-4 IS=10E-14)
+.MODEL QNPN NPN(IS=6E-15 BF=250 VAF=95 CJE=7.5pF CJC=2.7pF)
+.MODEL QPNP PNP(IS=4.7E-14 BF=125 VAF=50 CJE=20pF CJC=33pF)
+.ENDS
+*
+* ======================================================================== 
+* THAT4301 OA1 Macromodel
+* REV 01 1/9/98
+* Note that this model corresponds to the opamp accessed through pins
+* 18, 19, and 20 of the 4301P (DIP package).  Power supply connections
+* must be added as indicated below.
+*
+* connections:
+*                non-inverting input
+*                |    inverting input
+*                |    |    positive power supply
+*                |    |    |  negative power supply
+*                |    |    |  |  output
+*                |    |    |  |  |
+.subckt 4301OA1  1 2 3 4 5
+*
+  c1   11 12 14.5E-12
+  c2    6  7 25.00E-12
+  dc    5 53 dx
+  de   54  5 dx
+  dlp  90 91 dx
+  dln  92 90 dx
+  dp    4  3 dx
+  egnd 99  0 poly(2) (3,0) (4,0) 0 .5 .5
+  fb    7 99 poly(5) vb vc ve vlp vln 0 3.255E6 -3E6 3E6 3E6 -3E6
+  ga    6  0 11 12 785.4E-6
+  gcm   0  6 10 99 7.854E-9
+  iee   3 10 dc 50.30E-6
+  hlim 90  0 vlim 1K
+  q1   11  2 13 qx
+  q2   12  1 14 qx
+  r2    6  9 100.0E3
+  rc1   4 11 1.273E3
+  rc2   4 12 1.273E3
+  re1  13 10 237.2
+  re2  14 10 237.2
+  ree  10 99 3.976E6
+  ro1   8  5 220
+  ro2   7 99 220
+  rp    3  4 48.66E3
+  vb    9  0 dc 0
+  vc    3 53 dc 1.600
+  ve   54  4 dc 1.200
+  vlim  7  8 dc 0
+  vlp  91  0 dc 3.40
+  vln   0 92 dc 5.90
+.model dx D(Is=800.0E-18)
+.model qx PNP(Is=800.0E-18 Bf=166.7)
+.ends
+*
+* ======================================================================== 
+* THAT4301 OA2 Macromodel
+* REV 01 1/9/98
+* Note that this model corresponds to the opamp accessed through pins
+* 6, 7, and 8 of the 4301P (DIP package).  Power supply connections
+* must be added as indicated below.
+*
+* connections:       
+*               non-inverting input
+*               |    inverting input
+*               |    |    positive power supply
+*               |    |    |  negative power supply
+*               |    |    |  |  output
+*               |    |    |  |  |
+.subckt 4301OA2 1 2 3 4 5
+*
+  c1   11 12 13.5E-12
+  c2    6  7 25.00E-12
+  dc    5 53 dx
+  de   54  5 dx
+  dlp  90 91 dx
+  dln  92 90 dx
+  dp    4  3 dx
+  egnd 99  0 poly(2) (3,0) (4,0) 0 .5 .5
+  fb    7 99 poly(5) vb vc ve vlp vln 0 1.830E6 -2E6 2E6 2E6 -2E6
+  ga    6  0 11 12 785.4E-6
+  gcm   0  6 10 99 7.854E-9
+  iee   3 10 dc 50.30E-6
+  hlim 90  0 vlim 1K
+  q1   11  2 13 qx
+  q2   12  1 14 qx
+  r2    6  9 100.0E3
+  rc1   4 11 1.273E3
+  rc2   4 12 1.273E3
+  re1  13 10 237.2
+  re2  14 10 237.2
+  ree  10 99 3.976E6
+  ro1   8  5 220
+  ro2   7 99 220
+  rp    3  4 66.69E3
+  vb    9  0 dc 0
+  vc    3 53 dc 1.600
+  ve   54  4 dc 1.200
+  vlim  7  8 dc 0
+  vlp  91  0 dc 3.40
+  vln   0 92 dc 5.90
+.model dx D(Is=800.0E-18)
+.model qx PNP(Is=800.0E-18 Bf=166.7)
+.ends
+*
+* ======================================================================== 
+* THAT4301 OA3 Macromodel
+* REV 01 1/9/98
+* Note that this model corresponds to the opamp accessed through pins
+* 12 and 13 of the 4301P (DIP package).  The non-inverting input is
+* internally connected to ground in the 4301.  Power supply connections
+* must be added as indicated below.
+*
+* connections:
+*                non-inverting input
+*                |    inverting input
+*                |    |    positive power supply
+*                |    |    |  negative power supply
+*                |    |    |  |  output
+*                |    |    |  |  |
+.subckt 4301OA3  1 2 3 4 5
+*
+  c1   11 12 14.0E-12
+  c2    6  7 25.00E-12
+  dc    5 53 dx
+  de   54  5 dx
+  dlp  90 91 dx
+  dln  92 90 dx
+  dp    4  3 dx
+  egnd 99  0 poly(2) (3,0) (4,0) 0 .5 .5
+  fb    7 99 poly(5) vb vc ve vlp vln 0 50.32E6 -50E6 50E6 50E6 -50E6
+  ga    6  0 11 12 785.4E-6
+  gcm   0  6 10 99 7.854E-9
+  iee   3 10 dc 50.30E-6
+  hlim 90  0 vlim 1K
+  q1   11  2 13 qx
+  q2   12  1 14 qx
+  r2    6  9 100.0E3
+  rc1   4 11 1.273E3
+  rc2   4 12 1.273E3
+  re1  13 10 237.2
+  re2  14 10 237.2
+  ree  10 99 3.976E6
+  ro1   8  5 45
+  ro2   7 99 45
+  rp    3  4 31.58E3
+  vb    9  0 dc 0
+  vc    3 53 dc 1.500
+  ve   54  4 dc 1.400
+  vlim  7  8 dc 0
+  vlp  91  0 dc 11.40
+  vln   0 92 dc 18
+.model dx D(Is=800.0E-18)
+.model qx PNP(Is=800.0E-18 Bf=166.7)
+.ends
+*
+* ======================================================================== 
+* THAT4301 RMS Macromodel
+* REV 01 1/9/98
+* REV 02 6/9/98
+* REV 03 11/9/98
+*
+* connections:
+*               input current
+*               |      timing current
+*               |      |  timing capacitor
+*               |      |  |  output current
+*               |      |  |  |       negative power supply
+*               |      |  |  |       |	 positive power supply
+*		|      |  |  |       |  |  ground
+*               |      |  |  |       |  |  |
+.SUBCKT 4301RMS IN IT CT OUT V- V+ GND
+*
+I_bias       V+ IN 100p
+I_I1         V+ 1 DC .000120 AC 0 
+V_V2         2 3 DC .61 AC 0 
+V_V3         4 GND DC .65 AC 0 
+E_E1         5 GND GND gmout 1
+G_G1         GND gmout 6 7 .001
+R_R1         5 2  100  
+R_R2         In 8  500  
+R_R3         In 9  500  
+J_J1         7 In 10 jp4301rm 
+J_J2         6 GND 11 jp4301rm
+R_R4         V- 7  1k  
+R_R5         V- 6  1k  
+R_R6         10 1  400  
+R_R7         11 1  400  
+C_C1         7 6  10p  
+R_R8         GND gmout  100000k  
+C_C2         V- gmout  11p  
+F_F1         Ct V- VF_F1 1.1
+VF_F1        GND It 0V
+F_F2         GND 13 VF_F2 1
+VF_F2        4 12 0V
+Q_Q11        14 14 Ct qn4301rm
+E_E2         14 GND 13 GND 1
+E_E3         out GND Ct 15 1
+Q_Q19        12 12 16 qn4301rm
+Q_Q20        16 9 3 qn4301rm
+Q_Q21        In 8 3 qn4301rm
+Q_Q22        12 2 In qn4301rm
+Q_Q26        gmout gmout V+ qn4301rm 
+Q_Q27         V- V- gmout qn4301rm
+Q_Q23        13 13 17 qn4301rm
+Q_Q24        17 17 GND qn4301rm
+Q_Q25        15 15 GND qn4301rm
+I_I2         V+ 15 DC 8.2u AC 0 
+.model qn4301rm npn(bf=250 vaf=95 re=4)
+.MODEL jp4301rm PJF(VTO=-1.46 BETA=1.67E-4 IS=10E-14)
+.ENDS
+*

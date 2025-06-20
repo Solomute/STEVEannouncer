@@ -4,7 +4,7 @@ RECTANGLE Normal -80 -120 80 120
 WINDOW 0 0 -120 Bottom 2
 SYMATTR Prefix X
 SYMATTR Value THAT2162
-SYMATTR ModelFile E:\Github\STEVEannouncer\Spice\Models\2162_Macro_03.lib
+SYMATTR ModelFile 2162_Macro_03.lib
 WINDOW 3 0 120 Top 2
 PIN -80 -80 LEFT 8
 PINATTR PinName IN1

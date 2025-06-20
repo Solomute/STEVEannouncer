@@ -1,0 +1,245 @@
+* ----------------------------------------------------------------------
+* --- 1512S08 Macromodel
+* --- Rev 00, Apr 21, 2017 -- Developed by FF
+* --- Rev 01, JBL 5-10-17
+* --- Changed subckt name to THAT1512
+* ----------------------------------------------------------------------
+* ---- Pin assignment
+* --- +In: Noninverting input
+* --- RG1: Feedback pin for Noninverting input
+* --- RG2: Feedback pin for Inverting input
+* --- -In: Inverting input
+* --- REF: Output CM reference
+* --- OUT: Output
+* --- V+ : Positive power supply
+* --- V- : Negative power supply
+* ----------------------------------------------------------------------
+.subckt THAT1512 +In RG1 RG2 -In REF OUT V+ V-
+* --------------------------------------
+* ----- User adjustable model parameters
+* ----- All values are typical observed in test
+* ---- dc Offsets
+* --- 0dB gain dc offset
+* --- Range: +/- 5mV
+V_Vos0dB         N_0020 REF 0.0005V
+* --- High Gain dc offset referred to the input
+* --- Range: +/- 250uV
+V_VosHiGain         N_0062 +In 0.00009197
+* --- Input bias current offset
+* --- Range: +/- 1.4uA
+I_Ibiasos         +In 0 DC 0uA
+* ---- ac variables
+* --- Gain
+* --- Typical: -0.017dB
+* --- Range: +/- 290 ohm (+/- 0.5dB)
+R_Rgainerr1         N_0042 RG1  -10
+R_Rgainerr2         N_0035 RG2  -10
+* --- CMRR (Common Mode Rejection Ratio)
+* --- Typical: 71.6dB at 1kHz and 0dB gain
+* --- Range: 0 to 84 ohm (min 45dB at 0dB gain)
+R_RCMerr         OUT N_0051  3.96
+* ----- End of user adjustable model parameters
+* --------------------------------------
+R_R21         N_0001 0  100Meg
+R_R22         N_0002 0  100Meg
+E_E10         N_0002 0 N_0003 N_0004 100
+D_D6         N_0004 N_0002 Dgen
+E_E9         N_0001 0 N_0005 N_0006 100
+D_D5         N_0001 N_0006 Dgen
+R_R23         N_0007 0  100Meg
+R_R20         N_0008 0  100Meg
+E_E8         N_0008 0 N_0009 N_0010 100
+D_D4         N_0008 N_0010 Dgen
+E_E11         N_0007 0 N_0011 N_0012 100
+D_D7         N_0012 N_0007 Dgen
+R_R19         N_0004 N_0013  1Meg
+R_R18         N_0006 N_0013  1Meg
+Q_Q101         N_0015 N_0014 N_0016 QPNPS 1.05
+Q_Q102         N_0018 N_0017 N_0019 QPNPS 1.05
+R_R111         N_0017 N_0020  5k
+C_C101         N_0021 N_0018  10p
+Q_Q103         N_0015 N_0022 N_0023 QNPNS 1
+Q_Q104         N_0018 N_0022 N_0024 QNPNS 1
+R_R17         N_0012 N_0025  1Meg
+R_R16         N_0010 N_0025  1Meg
+E_E7b         N_0028 N_0005 N_0026 N_0027 1
+E_E6b         N_0003 N_0028 N_0026 N_0027 1
+E_E7a         N_0029 N_0009 N_0026 N_0027 1
+E_E6a         N_0011 N_0029 N_0026 N_0027 1
+D_D10         N_0025 N_0030 Dgen
+D_D11         N_0013 N_0030 Dgen
+D_D12         N_0031 N_0032 Dgen
+D_D13         N_0033 N_0034 Dgen
+R_Rf2         N_0028 N_0035  5k
+Q_Q3         N_0033 N_0036 N_0037 QPNPS 1.05
+Q_Q4         N_0031 N_0036 N_0038 QPNPS 1.05
+Q_Q5         N_0036 N_0036 N_0039 QPNPS 1.05
+C_C3         N_0040 N_0033  1p
+R_Rc1         N_0031 N_0040  6k
+C_C2         N_0034 N_0033  1.6p
+C_C1         N_0032 N_0031  1.6p
+R_Rz2         N_0025 N_0034 RB 200
+R_Rz1         N_0013 N_0032 RB 200
+G_G6         N_0025 0 N_0033 N_0041 0.00595
+R_R7         0 N_0025  46.1k
+R_R8         0 N_0013  46.1k
+R_Rf1         N_0029 N_0042  5k
+G_G7         N_0013 0 N_0031 N_0041 0.00595
+R_Rb1         N_0026 N_0027 RB 26k
+R_Rb101         N_0044 N_0043 RB 25573
+I_I1         N_0043 N_0026 DC 1uA
+R_R121         N_0045 0  100Meg
+E_E119         N_0045 0 N_0046 N_0047 100
+E_E118         N_0050 0 N_0048 N_0049 100
+D_D106         N_0049 N_0050 Dgen
+R_R122         N_0050 0  100Meg
+D_D104         N_0045 N_0047 Dgen
+R_R112         N_0051 N_0014  5k
+E_E107b         N_0052 N_0046 N_0044 N_0043 1
+E_E106b         N_0048 N_0052 N_0044 N_0043 1
+R_R108         0 N_0053  16.808k
+G_G112         N_0053 0 N_0018 N_0054 0.011815
+R_Rz101         N_0053 N_0021 RB 1
+D_D112         N_0018 N_0053 Dgen
+D_D102         N_0053 N_0055 Dgen
+D_D105         N_0056 N_0053 Dgen
+R_R118         N_0047 N_0053  1Meg
+R_R119         N_0049 N_0053  1Meg
+E_E107         N_0057 0 N_0052 OUT 1
+D_D115         N_0058 N_0057 Dgen
+D_D114         N_0057 N_0059 Dgen
+R_R123         N_0058 N_0059  15
+R_Rsh2         OUT N_0052 RE 12
+F_F1         N_0053 0 VF_F1 5
+VF_F1        N_0058 0 0V
+D_Dp5         V- +In Dgen
+D_Dp7         V- RG2 Dgen
+D_Dp6         V- RG1 Dgen
+D_Dp8         V- -In Dgen
+G_G1         N_0060 V- N_0027 V- 0.00064
+G_G2         RG2 V- N_0027 V- 0.00064
+G_G5         N_0033 V- N_0027 V- 0.000069615
+G_G4         N_0031 V- N_0027 V- 0.000069615
+V_V5         N_0041 V- 1.34V
+D_D1         V- N_0013 Dgen
+D_D2         V- N_0025 Dgen
+G_G10         N_0028 V- N_0003 N_0004 0.01515
+R_R104         V- N_0023  1k
+R_R106         V- N_0022  30k
+R_R105         V- N_0024  1k
+V_V105         N_0054 V- 1.36V
+V_V101         N_0056 V- 2.28V
+G_G110         N_0052 V- N_0048 N_0049 0.01197
+G_G8         N_0029 V- N_0011 N_0012 0.01515
+D_Dp10         V- REF Dgen
+D_Dp12         V- OUT Dgen
+R_R109         N_0014 N_0028  10k
+R_R110         N_0029 N_0017  10k
+R_R101         N_0061 N_0016 RB 1050
+R_R102         N_0061 N_0019 RB 1050
+R_Rdum1         N_0060 RG1  0.001
+G_G3         N_0036 V- N_0027 V- 0.00007138
+R_R4         V- N_0027 Rptat 1349950
+D_Dp13         V- V+ Dgen
+R_R107         N_0044 V+ Rptat 220687
+R_R1         N_0037 V+  1.5k
+R_R2         N_0038 V+  1.5k
+R_R3         N_0039 V+  13114
+V_V2         V+ N_0030 1.936V
+G_G11         V+ N_0028 N_0006 N_0005 0.01515
+Q_Q105         V+ N_0015 N_0022 QNPNS 1
+G_G113         V+ N_0061 V+ N_0044 0.00089
+V_V102         V+ N_0055 0.77V
+G_G111         V+ N_0052 N_0047 N_0046 0.01197
+G_G9         V+ N_0029 N_0010 N_0009 0.01515
+D_Dp9         REF V+ Dgen
+D_Dp1         +In V+ Dgen
+D_Dp3         RG2 V+ Dgen
+D_Dp2         RG1 V+ Dgen
+D_Dp4         -In V+ Dgen
+D_Dp11         OUT V+ Dgen
+Q_Q2         N_0038 -In RG2 QNPNLI 1.015
+Q_Q1         N_0037 N_0062 RG1 QNPNLI 1.015
+G_G12         RG1 0 N_0063 0 1
+G_G13         RG2 0 N_0064 0 1
+R_Rnoi11         N_0063 0  0.0026
+R_Rnoi12         0 N_0063  0.0026
+R_Rnoi22         0 N_0064  0.0026
+R_Rnoi21         N_0064 0  0.0026
+R_R114         V- V+  80830
+I_I2         V+ V- DC 1310uA
+.ends 1512S08
+* ----------------------------------------------------------------------
+* LARGE NPN TRANSISTOR
+.MODEL QNPNLI NPN (        IS      = 1E-14
++BF      = 150
++NF      = 1              BR      = 119.4532856
++NR      = 1              ISE     = 6E-16        NE      = 1.3340565
++ISC     = 6.35E-14       NC      = 1.6525       VAF     = 180
++VAR     = 10.8094728     IKF     = 0.2850543    IKR     = 0.0103675
++RB      = 15             RBM     = 2.94235      IRB     = 3.5E-4
++RE      = 0.1            RC      = 12
++CJE     = 1.017E-11      VJE     = 0.7241957    MJE     = 0.49456
++FC      = 0.97           CJC     = 4.38E-12     VJC     = 0.5595858
++MJC     = 0.498675       TF      = 7.063932E-11 XTF     = 17.846692
++ITF     = 0.1724         VTF     = 1.7447209    PTF     = 20
++TR      = 2.78E-9        XTB     = 1.1          EG      = 1.16
++XTI     = 3.0423         KF      = 400E-18      QCO     = 1E-12
++RCO     = 1              VO      = 1            GAMMA   = 1E-13)
+* SMALL PNP TRANSISTOR
+.MODEL QPNPS PNP (         IS     = 1.271569E-16
++ BF     = 75
++ NF     = 0.997           BR     = 8.5455142
++ NR     = 1               ISE    = 1.35611E-16     NE     = 1.4504529
++ ISC    = 1.080381E-14    NC     = 1.3760886       VAF    = 125
++ VAR    = 15.4523822      IKF    = 5.34609E-3      IKR    = 3.584662E-4
++ RB     = 250             RBM    = 3.9345          IRB    = 4.5159E-6
++ RE     = 4.0345          RC     = 103.8801001     CJE    = 4.84917E-13
++ VJE    = 0.7026986       MJE    = 0.4516283       FC     = 0.96
++ CJC    = 5.252548E-13    VJC    = 0.50234         MJC    = 0.1646286
++ TF     = 2.404569E-10    XTF    = 25.7198121      ITF    = 1.285574E-3
++ VTF    = 1.7604027       QCO    = 1E-12           RCO    = 78.045
++ VO     = 0.48            GAMMA  = 1E-13           XTB    = 1.2
++ PTF	   = 20)
+*
+* ----------------------------------------------------------------------
+* SMALL NPN TRANSISTOR
+.MODEL QNPNS NPN (         IS     = 2.094763E-16
++ BF     = 150
++ NF     = 1.003           BR     = 42.7302473
++ NR     = 1               ISE    = 1.133444E-17    NE     = 1.2680345
++ ISC    = 5.128E-15       NC     = 1.3852571       VAF    = 317
++ VAR    = 13.8600678      IKF    = 4.6261E-3       IKR    = 6.633615E-4
++ RB     = 220.2415816     RBM    = 10.5739703      IRB    = 8.12759E-5
++ RE     = 3.3546          RC     = 39.64           CJE    = 2.980013E-13
++ VJE    = 0.5555926       MJE    = 0.196179        FC     = 0.98
++ CJC    = 1.87624E-13     VJC    = 0.50875         MJC    = 0.2886126
++ TF     = 1.424392E-10    XTF    = 20.3000836      ITF    = 6.266082E-3
++ VTF    = 2.5905793       QCO    = 1E-12           RCO    = 65.045
++ VO      = 0.3            GAMMA  = 1E-13           XTB    = 1.1
++ PTF	   = 20)
+* ----------------------------------------------------------------------
+.MODEL D1 D (
++ IS=864.10E-18
++ N=1.0793
++ RS=100
++ IKF=1.0405
++ CJO=194.00E-15
++ M=.42945
++ VJ=.79868
++ ISR=10.127E-12
++ NR=4.9950
++ BV=100
++ IBV=10
++ TT=7.5741E-9)
+* ----------------------------------------------------------------------
+.MODEL Dgen D (
++ IS=1E-14)
+* ----------------------------------------------------------------------
+.MODEL RPTAT RES (R=1 TC1=3300E-6)
+* ----------------------------------------------------------------------
+.MODEL RB RES (R=1 TC1=1500E-6)
+* ----------------------------------------------------------------------
+.MODEL RE RES (R=1 TC1=2000E-6)
+* ----------------------------------------------------------------------
+

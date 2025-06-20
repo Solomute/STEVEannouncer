@@ -1,0 +1,8 @@
+*backups
+*cache
+*bak
+*.lck
+*.log
+*.raw
+*Draft*
+*.fft

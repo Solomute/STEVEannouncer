@@ -1,0 +1,145 @@
+* ----------------------------------------------------------------------
+* --- THAT1570 Macromodel
+* --- Rev 00, Aug 02, 2012 -- Developed by FF
+* ----Rev 01, July 17, 2014 by JBL
+* ---Changed pinout name to match data sheet
+* -- Changed title to THAT1570
+* --- Rev 02 RB 6-15-17
+* --- Changed VCC and VEE to V+ and V-
+* ----------------------------------------------------------------------
+* ---- Pin assignment 
+* --- IN1: Noninverting input 1
+* --- RG1: Inverting input 1
+* --- RG2: Inverting input 2
+* --- IN2: Noninverting input 2
+* --- OUT1: Output 1
+* --- OUT2: Output 2
+* --- V+ (VCC): Positive power supply
+* --- V- (VEE): Negative power supply
+* ----------------------------------------------------------------------
+.subckt THAT1570 IN1 Rg1 Rg2 IN2 OUT1 OUT2 V+ V-
+R_R21        N_0001 0  100000k  
+G_G12        RG1 0 N_0002 0 1
+G_G13        RG2 0 N_0003 0 1
+Q_Q5         N_0004 N_0004 N_0005 QPNPS 2
+Q_Q1         N_0006 IN1 RG1 QNPNLI 1
+Q_Q2         N_0007 IN2 RG2 QNPNLI 1
+C_C3         N_0008 N_0009  5p  
+R_Rb1        Ref12 Ref11 RB 26k
+Q_Q3         N_0009 N_0004 N_0006 QPNPS 2
+Q_Q4         N_0010 N_0004 N_0007 QPNPS 2
+R_Rc1        N_0010 N_0008  2300  
+G_G7         N_0012 0 N_0010 N_0011 0.0116
+G_G6         N_0013 0 N_0009 N_0011 0.0116
+E_E7b        N_0014 N_0015 Ref12 Ref11 1
+E_E6b        N_0016 N_0014 Ref12 Ref11 1
+R_R8         0 N_0012  61k  
+R_R7         0 N_0013  61k  
+R_R22        N_0017 0  100000k  
+E_E10        N_0017 0 N_0016 N_0018 100
+D_D6         N_0018 N_0017 Dgen 
+E_E9         N_0001 0 N_0015 N_0019 100
+D_D5         N_0001 N_0019 Dgen 
+R_R23        N_0020 0  100000k  
+E_E6a        N_0021 N_0022 Ref12 Ref11 1
+R_R20        N_0023 0  100000k  
+E_E7a        N_0022 N_0024 Ref12 Ref11 1
+E_E8         N_0023 0 N_0024 N_0025 100
+D_D4         N_0023 N_0025 Dgen 
+E_E11        N_0020 0 N_0021 N_0026 100
+D_D7         N_0026 N_0020 Dgen 
+D_D14        N_0027 N_0028 Dgen 
+D_D15        N_0028 N_0027 Dgen 
+E_E7         N_0027 0 N_0014 OUT2 1
+R_Rsh2       OUT2 N_0014 RE 15
+D_D16        N_0029 N_0030 Dgen 
+D_D17        N_0030 N_0029 Dgen 
+R_Rsh1       OUT1 N_0022 RE 15
+E_E6         N_0029 0 N_0022 OUT1 1
+D_D2         N_0031 N_0013 Dgen 
+R_R17        N_0026 N_0013  1000k  
+R_R16        N_0025 N_0013  1000k  
+F_F2         N_0013 0 VF_F2 300
+VF_F2        N_0030 0 0V
+D_D1         N_0031 N_0012 Dgen 
+R_R19        N_0018 N_0012  1000k  
+R_R18        N_0019 N_0012  1000k  
+F_F1         N_0012 0 VF_F1 300
+VF_F1        N_0028 0 0V
+E_E12        N_0031 0 N_0032 0 1
+V_V2         N_0033 0 1.24V
+D_D10        N_0013 N_0034 Dgen 
+D_D11        N_0012 N_0034 Dgen 
+C_C1         N_0035 N_0010  8p  
+R_Rz1        N_0012 N_0035 RB 100
+D_D12        N_0010 N_0035 Dgen 
+D_D13        N_0009 N_0036 Dgen 
+R_Rz2        N_0013 N_0036 RB 100
+C_C2         N_0036 N_0009  8p  
+R_Rnoi11     N_0002 0  0.0017  
+R_Rnoi12     0 N_0002  0.0017  
+R_Rnoi22     0 N_0003  0.0017  
+R_Rnoi21     N_0003 0  0.0017  
+E_E5         N_0034 0 V+ N_0033 1
+G_G11        V+ N_0014 N_0019 N_0015 0.026
+G_G9         V+ N_0022 N_0025 N_0024 0.026
+R_R3         N_0005 V+  12493  
+R_R2         N_0007 V+  2.5k  
+R_R1         N_0006 V+  2.5k  
+I_I1         V+ Ref12 DC 1uA  
+I_I2         V+ V- DC 2.753mA  
+R_R14        V- V+  49.87k  
+G_G10        N_0014 V- N_0016 N_0018 0.026
+G_G8         N_0022 V- N_0021 N_0026 0.026
+G_G3         N_0004 V- Ref11 V- 0.00019
+G_G4         N_0010 V- Ref11 V- 0.00019
+G_G5         N_0009 V- Ref11 V- 0.00019
+G_G2         RG2 V- Ref11 V- 0.000776
+G_G1         RG1 V- Ref11 V- 0.000776
+R_R4         V- Ref11 Rptat 1000000
+V_V5         N_0011 V- 2V
+V_V1         N_0032 V- 1.92V
+.ends THAT1570
+* ----------------------------------------------------------------------
+* LARGE NPN TRANSISTOR
+.MODEL QNPNLI NPN (        IS      = 1E-14   
++BF      = 150
++NF      = 1              BR      = 119.4532856         
++NR      = 1              ISE     = 6E-16        NE      = 1.3340565             
++ISC     = 6.35E-14       NC      = 1.6525       VAF     = 180  
++VAR     = 10.8094728     IKF     = 0.2850543    IKR     = 0.0103675        
++RB      = 15             RBM     = 2.94235      IRB     = 3.5E-4          
++RE      = 0.1            RC      = 12        
++CJE     = 1.017E-11      VJE     = 0.7241957    MJE     = 0.49456              
++FC      = 0.97           CJC     = 4.38E-12     VJC     = 0.5595858              
++MJC     = 0.498675       TF      = 7.063932E-11 XTF     = 17.846692              
++ITF     = 0.1724         VTF     = 1.7447209    PTF     = 20             
++TR      = 2.78E-9        XTB     = 1.1          EG      = 1.16               
++XTI     = 3.0423         KF      = 400E-18      QCO     = 1E-12
++RCO     = 1              VO      = 1            GAMMA   = 1E-13)     
+* SMALL PNP TRANSISTOR                                                                      
+.MODEL QPNPS PNP (         IS     = 1.271569E-16  
++ BF     = 75              
++ NF     = 0.997           BR     = 8.5455142
++ NR     = 1               ISE    = 1.35611E-16     NE     = 1.4504529
++ ISC    = 1.080381E-14    NC     = 1.3760886       VAF    = 125
++ VAR    = 15.4523822      IKF    = 5.34609E-3      IKR    = 3.584662E-4
++ RB     = 250             RBM    = 3.9345          IRB    = 4.5159E-6
++ RE     = 4.0345          RC     = 103.8801001     CJE    = 4.84917E-13
++ VJE    = 0.7026986       MJE    = 0.4516283       FC     = 0.96
++ CJC    = 5.252548E-13    VJC    = 0.50234         MJC    = 0.1646286
++ TF     = 2.404569E-10    XTF    = 25.7198121      ITF    = 1.285574E-3
++ VTF    = 1.7604027       QCO    = 1E-12           RCO    = 78.045
++ VO     = 0.48            GAMMA  = 1E-13           XTB    = 1.2
++ PTF	   = 20)
+*
+* ----------------------------------------------------------------------
+.MODEL Dgen D (
++ IS=1E-14)
+* ----------------------------------------------------------------------
+.MODEL RPTAT RES (R=1 TC1=3300E-6)
+* ----------------------------------------------------------------------
+.MODEL RB RES (R=1 TC1=1500E-6)
+* ----------------------------------------------------------------------
+.MODEL RE RES (R=1 TC1=2000E-6)
+* ----------------------------------------------------------------------

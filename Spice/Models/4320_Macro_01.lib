@@ -1,0 +1,458 @@
+*
+* This information is protected under the United States copyright
+* laws. THAT Corporation ("THAT") hereby grants users of this
+* macromodel (the "User"), a nonexclusive, nontransferable
+* license to use this macromodel as long as the licensee abides
+* by the terms of this agreement.  Before using the macromodel,
+* the User should read this license.  If the User does not accept
+* these terms, the macromodel contained herein should be erased,
+* destroyed or returned to THAT within 30 days.
+*
+* The User may copy and distribute, at no charge, verbatim copies
+* of the Macromodel as contained herein, in any medium, provided
+* that the User conspicuously publishes on each copy this copyright
+* notice and disclaimer of warranty.  The User may modify this
+* macromodel to suit his or her specific applications, and the User
+* may make copies of the modified macromodel for use within his or
+* her company only, and provided the modified files carry prominent
+* notices stating that the files have been changed, and the date of
+* any changes.
+*
+* This macromodel is provided "AS IS, WHERE IS, AND WITH NO WARRANTY
+* OF ANY KIND EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED
+* TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+* PARTICULAR PURPOSE."  In no event will THAT be liable for special,
+* collateral, incidental, or consequential damages in connection
+* with or arising out of the use of this macromodel.  THAT reserves
+* the right to make changes to the products and macromodel without
+* prior notice.
+*
+*
+* THAT4320 Macromodel
+* Rev 01, by RB, 06-30-2017
+* Generates the 4320 analog engine all pieces at onece, in one package
+*
+*
+*
+.subckt THAT4320 VCA_IN VCA_OUT EC+ RMS_IN CT RMS_OUT +In1 -In1 OUT1 +In2 -In2 OUT3 +In4 -In4 OUT4 FILT VREF VPTAT GND V+ V-
+X_X1	VCA_IN VCA_OUT EC+ V+ GND VREF 4320VCA_THAT
+X_X2	RMS_IN CT RMS_OUT VREF GND V+ 4320RMS_THAT
+X_X3	+In1 -In1 OUT1 V+ V- 4320_OA1_THAT
+X_X4	+In2 -In2 EC+ V+ GND 4320_OA2_THAT
+X_X5	VREF VCA_OUT OUT3 V+ GND 4320_OA3_THAT
+X_X6	+In4 -In4 OUT4 V+ GND 4320_OA4_THAT
+X_X7	FILT VREF VPTAT GND V+ 4320_REFBUF-PTAT_THAT
+.ends
+*
+*
+*
+*THAT4320 VCA MACROMODEL
+*REV 00 11-10-2016
+*CONNECTIONS:
+*                    input current
+*                    |      output current
+*                    |      |       positive control voltage
+*                    |      |       |   positive power supply
+*                    |      |       |   |   negative power supply
+*                    |      |       |   |   |   reference voltage
+*                    | 	    |       |   |   |   |
+.SUBCKT 4320VCA_THAT VCA_IN VCA_OUT EC+ VCC GND VREF
+*
+I_I2         0 30 DC 20uA
+R_R11         22 20  30
+R_R9         EC+ 4  30
+Q_Q35         20 22 24 QNPNNOM
+Q_Q42         30 30 31 QNPNNOM
+V_V6         14 13 DC 1.4V
+D_D5         14 VCC DNOM
+Q_Q43         0 0 31 QPNPNOM
+Q_Q33         12 9 10 QNHIB
+V_V7         13 15 DC .7V
+I_I1         10 GND DC 7.5uA
+G_G7         28 GND 40 GND 100e-6
+E_E1         20 28 30 0 2
+Q_Q39         28 28 27 QPNPNOM
+Q_Q40         VCA_IN EC+ 23 QPNPNOM
+Q_Q34         VCA_IN 25 26 QNPNNOM
+Q_Q36         VCA_OUT 4 27 QNPNNOM
+R_R36         GND 28  100Meg
+Q_Q38         28 28 26 QPNPNOM
+I_I9         20 28 DC 130uA
+Q_Q41         VCA_OUT Vref 24 QPNPNOM
+V_V5         Vref 40 DC 1.8V
+R_R10         Vref 25  30
+V_Vos         9 Vref DC 3mV
+D_D6         Vref 15 DNOM
+C_C3         20 0  4.7pF
+R_R12         21 20  30
+Q_Q37         20 21 23 QNPNNOM
+Q_Q32         11 VCA_IN 10 QNHIB
+R_R35         12 VCC  15k
+R_R34         11 VCC  15k
+R_R29         Vref 13  25Meg
+G_G6         19 20 13 Vref 2.3e-3
+C_C4         Vref 13  13pF
+G_G5         VCC 13 11 12 33.65e-6
+R_R7         19 VCC  300
+G_G8         VCA_IN GND 6 7 25e-5
+D_D7         6 GND DNOM
+D_D8         7 GND DNOM
+I_I10         VCC 6 DC 100uA
+I_I11         VCC 7 DC 100uA
+I_Isym         0 4 DC -5u
+I_I8         28 GND DC 950uA
+.model DNOM D Is=1e-14 Cjo=.1pF Rs=.1
+.model QNHIB NPN BF=2000
+.model QNPNNOM NPN IS=1e-15 BF=150 VAF=150 RB=20 CJC=1.85pF
+.model QPNPNOM PNP IS=1e-15 BF=100 VAF=100 RB=20 CJC=2.2pF
+.ENDS
+*
+*
+*
+*THAT4320 RMS MACROMODEL
+*REV 00 11-09-2016
+*CONNECTIONS:
+*                    input current
+*                    |      timing capacitor
+*                    |      |  output voltage
+*                    |      |  |       reference voltage
+*                    |      |  |       |    ground
+*                    |      |  |       |    |   positive power supply
+*                    |      |  |       |    |   |
+.SUBCKT 4320RMS_THAT RMS_IN CT RMS_OUT VREF GND VCC
+*
+Q_Q6         2 1 RMS_IN QPNPRMS
+F_F5         CT GND VF_F5 1
+VF_F5        5 GND 0V
+F_F3         6 GND VF_F3 1
+VF_F3        2 GND 0V
+F_F4         VCC 7 VF_F4 1
+VF_F4        VCC 6 0V
+I_I1         8 GND DC 3.2uA
+F_F2         VCC 2 VF_F2 1
+VF_F2        VCC 9 0V
+Q_Q3         9 10 RMS_IN QNPNRMS
+E_E1         VCC 10 VCC 11 1
+G_G1         11 0 12 13 6.154e-6
+R_R1         0 11  22Meg
+I_I2         14 5 DC 7.5uA
+Q_Q1         13 RMS_IN 8 QNPNRMS 1
+R_R4         12 VCC  162.5k
+R_R3         13 VCC  162.5k
+C_C1         0 11  2pF
+E_E2         10 1 0 3 1
+E_E3         15 16 VCC 14 1
+Q_Q2         12 VREF 8 QNPNRMS 1
+E_E6         15 0 VREF 0 1
+Q_Q4         7 17 18 QNPNRMS 4
+Q_Q7         19 16 18 QPNPRMS 4
+Q_Q5         14 14 VCC QPNPRMS 4
+R_R6         17 7  600
+R_R7         19 16  600
+I_I4         3 GND DC 17nA
+Q_Q10         3 3 4 QPNPRMS
+Q_Q9         VCC 0 4 QNPNRMS
+E_E4         20 15 7 15 1
+E_E5         RMS_OUT 15 CT 15 1
+Q_Q8         VCC 20 CT QNPNRMS 4
+I_I5	     VCC GND 370uA
+.model QNPNRMS NPN IS=1e-15 BF=200 VAF=800 CJC=.19pF RB=220
+.model QPNPRMS PNP IS=1e-15 BF=75 VAF=80 CJC=.53pF RB=205
+.ENDS
+*
+*
+*
+*THAT4320 OA1 MACROMODEL
+*REV 00 11-14-2016
+* connections:        non-inverting input
+*                     |   inverting input
+*                     |   |   output
+*                     |   |   |   positive power supply
+*                     |   |   |   |   ground
+*                     |   |   |   |   |
+.subckt 4320_OA1_THAT IN+ IN- OUT VCC VEE
+*
+  c1   11 12 6.2932E-12
+  c2    6  7 15.000E-12
+  dc    OUT 53 dy
+  de   54  OUT dy
+  dlp  90 91 dx
+  dln  92 90 dx
+  dp    VEE VCC dx
+  egnd 99  0 poly(2) (VCC,0) (VEE,0) 0 .5 .5
+  fb    7 99 poly(5) vb vc ve vlp vln 0 3.0471E6 -1E3 1E3 3E6 -3E6
+  ga    6  0 11 12 250e-6
+  gcm   0  6 10 99 12.252E-9
+  iee   VCC 10 dc 61.000E-6
+  hlim 90  0 vlim 1K
+  q1   11  IN- 13 qx1
+  q2   12  IN+ 14 qx2
+  r2    6  9 100.00E3
+  rc1   VEE 11 4e3
+  rc2   VEE 12 4e3
+  re1  13 10 1.0000E-2
+  re2  14 10 1.0000E-2
+  ree  10 99 3.2787E6
+  ro1   8  OUT 30
+  ro2   7 99 15
+  ip    VCC  VEE 540e-6
+  vb    9  0 dc 0
+  vc    VCC 53 dc 1.5043
+  ve   54  VEE dc 1.5043
+  vlim  7  8 dc 0
+  vlp  91  0 dc 5.9000
+  vln   0 92 dc 3.1000
+.model dx D(Is=800.00E-18)
+.model dy D(Is=800.00E-18 Rs=1m Cjo=10p)
+.model qx1 PNP(Is=800.00E-18 Bf=58.252)
+.model qx2 PNP(Is=831.5365E-18 Bf=61.856)
+.ends
+*
+*
+*
+*THAT4320 OA2 MACROMODEL
+*REV 00 11-10-2016
+*CONNECTIONS:
+*                     non-inverting input
+*                     |    inverting input
+*                     |    |  output voltage
+*                     |    |  |       ositive power supply
+*                     |    |  |      |   ground
+*                     |    |  |      |   |
+*                     |    |  |      |   |
+.SUBCKT 4320_OA2_THAT IN+ IN- OA2OUT VCC GND
+*
+D_D2         IN- IN+ DCBN 1
+D_D1         IN+ IN- DCBN 1
+Q_Q1         2 IN+ 1 QPNPS 1
+R_R1         GND 2  5k
+R_R2         GND 3  5k
+Q_Q2         3 IN- 1 QPNPS 1.05
+R_R3         GND 7  5k
+Q_Q9         6 6 7 QNPNS 2
+I_I2         Vcc 6 DC 60uA
+I_I1         Vcc 1 DC 60uA
+Q_Q5         GND 5 OA2OUT QPNPS 2
+Q_Q8         5 6 3 QNPNS 1
+Q_Q3         5 5 9 QPNPS 1
+Q_Q4         8 8 9 QNPNS 1
+Q_Q6         Vcc 8 OA2OUT QNPNS 2
+F_F1         VCC 8 VF_F1 1
+VF_F1        VCC 4 0V
+D_D3         8 10 DCBN 1
+V_V2         VCC 10 1.38
+Q_Q7         4 6 2 QNPNS 1
+*
+* Device Models
+*
+*NPN TRANSISTOR
+.MODEL QNPNS NPN (IS     = 2.094763E-16
++ BF     = 100
++ NF     = 1
++ VAF    = 317
++ RB     = 450
++ CJC    = 1.9pF)
+*
+*
+*PNP TRANSISTOR
+.MODEL QPNPS PNP (IS     = 1.271569E-16
++ BF     = 70
++ NF     = 1
++ VAF    = 125
++ RB     = 1.2k
++ CJC    = 0.5pF
++ KF     = 800e-18)
+*
+*DIODE
+.MODEL DCBN D (
++ IS=864.10E-18
++ N=1
++ RS=100
++ IKF=1.0405
++ CJO=194.00E-15)
+*
+.ENDS 4320_OA2_THAT
+*
+*
+*
+*THAT4320 OA3 MACROMODEL
+*REV 00 11-14-2016
+* connections:        non-inverting input
+*                     |   inverting input
+*                     |   |   output
+*                     |   |   |   positive power supply
+*                     |   |   |   |   ground
+*                     |   |   |   |   |
+.subckt 4320_OA3_THAT IN+ IN- OUT VCC GND
+*
+  c1   11 12 3.1466E-12
+  c2    6  7 7.5000E-12
+  dc    OUT 53 dy
+  de   54  OUT dy
+  dlp  90 91 dx
+  dln  92 90 dx
+  dp    GND  VCC dx
+  egnd 99  0 poly(2) (VCC,0) (GND,0) 0 .5 .5
+  fb    7 99 poly(5) vb vc ve vlp vln 0 3.8759E6 -1E3 1E3 3E6 -3E6
+  ga    6  0 11 12 172.00E-6
+  gcm   0  6 10 99 3.4400E-9
+  iee   VCC 10 dc 24.400E-6
+  hlim 90  0 vlim 1K
+  q1   11  IN- 13 qx1
+  q2   12  IN+ 14 qx2
+  r2    6  9 100.00E3
+  rc1   GND 11 5.8E3
+  rc2   GND 12 5.8E3
+  re1  13 10 739.27
+  re2  14 10 739.27
+  ree  10 99 8.1967E6
+  ro1   8  OUT 60
+  ro2   7 99 30
+  ip    VCC  GND 275e-6
+  vb    9  0 dc 0
+  vc    VCC 53 dc 1.49
+  ve   54  GND dc 1.49
+  vlim  7  8 dc 0
+  vlp  91  0 dc 2.9
+  vln   0 92 dc 1.9
+.model dx D(Is=800.00E-18)
+.model dy D(Is=800.00E-18 Rs=1m Cjo=10p)
+.model qx1 PNP(Is=800.00E-18 Bf=61.5)
+.model qx2 PNP(Is=848.00E-18 Bf=58.5)
+.ends
+*
+*
+*
+*THAT4320 OA4 MACROMODEL
+*REV 00 11-14-2016
+* connections:        non-inverting input
+*                     |   inverting input
+*                     |   |   output
+*                     |   |   |   positive power supply
+*                     |   |   |   |   ground
+*                     |   |   |   |   |
+.subckt 4320_OA4_THAT IN+ IN- OUT VCC GND
+*
+  c1   11 12 3.1466E-12
+  c2    6  7 7.5000E-12
+  dc    OUT 53 dy
+  de   54  OUT dy
+  dlp  90 91 dx
+  dln  92 90 dx
+  dp    GND  VCC dx
+  egnd 99  0 poly(2) (VCC,0) (GND,0) 0 .5 .5
+  fb    7 99 poly(5) vb vc ve vlp vln 0 3.8759E6 -1E3 1E3 3E6 -3E6
+  ga    6  0 11 12 172.00E-6
+  gcm   0  6 10 99 3.4400E-9
+  iee   VCC 10 dc 24.400E-6
+  hlim 90  0 vlim 1K
+  q1   11  IN- 13 qx1
+  q2   12  IN+ 14 qx2
+  r2    6  9 100.00E3
+  rc1   GND 11 5.8E3
+  rc2   GND 12 5.8E3
+  re1  13 10 739.27
+  re2  14 10 739.27
+  ree  10 99 8.1967E6
+  ro1   8  OUT 60
+  ro2   7 99 30
+  ip    VCC  GND 275e-6
+  vb    9  0 dc 0
+  vc    VCC 53 dc 1.49
+  ve   54  GND dc 1.49
+  vlim  7  8 dc 0
+  vlp  91  0 dc 2.9
+  vln   0 92 dc 1.9
+.model dx D(Is=800.00E-18)
+.model dy D(Is=800.00E-18 Rs=1m Cjo=10p)
+.model qx1 PNP(Is=800.00E-18 Bf=61.5)
+.model qx2 PNP(Is=848.00E-18 Bf=58.5)
+.ends
+*
+*
+*
+*THAT4320 Vref Buffer and PTAT Generator MACROMODEL
+*REV 00 11-10-2016
+*CONNECTIONS:
+*	                      Filter
+*                             |    Vref
+*                             |    |    Vptat
+*                             |    |    |     GND
+*                             |    |    |     |   Positive power supply
+*                             |    |    |     |   |
+.SUBCKT 4320_REFBUF-PTAT_THAT FILT VREF VPTAT GND VCC
+*
+*
+Q_Q9         6 6 7 QNPNS 2
+I_I2         VCC 6 DC 60uA
+Q_Q8         5 6 3 QNPNS 1
+Q_Q3         5 5 9 QPNPS 1
+Q_Q4         8 8 9 QNPNS 1
+F_F1         VCC 8 VF_F1 1
+VF_F1        VCC 4 0V
+D_D3         8 10 DCBN 1
+V_V2         VCC 10 1.38
+Q_Q7         4 6 2 QNPNS 1
+D_D4         VCC 11 DCBN 1
+D_D5         11 12 DCBN 1
+Q_Q1         2 FILT 1 QPNPS 1
+I_I1         VCC 1 DC 60uA
+R_R5         FILT 12  20k
+R_R6         13 FILT  20k
+D_D6         13 14 DCBN 1
+Q_Q6         VCC 8 VREF QNPNS 2
+D_D2         VREF FILT DCBN 1
+D_D1         FILT VREF DCBN 1
+Q_Q2         3 VREF 1 QPNPS 1.05
+D_D8         VPTAT VREF DCBN 1
+D_D9         VREF VPTAT DCBN 1
+Q_Q13         17 17 15 QNPNS 1
+I_I4         15 GND DC 60uA
+Q_Q11         17 VREF 16 QPNPS 8
+I_I3         VCC 16 DC 30uA
+Q_Q14         VCC VREF 15 QNPNS 1
+C_C1         18 17  6.25pF
+I_I5         19 GND DC 60uA
+Q_Q10         18 VPTAT 16 QPNPS 1
+Q_Q16         GND 19 VPTAT QPNPS 2
+I_I6         VCC VPTAT DC 175uA
+R_R3         GND 7  5k
+Q_Q5         GND 5 VREF QPNPS 2
+R_R2         GND 3  5k
+R_R1         GND 2  5k
+D_D7         14 GND DCBN 1
+Q_Q15         VCC 18 19 QNPNS 1
+Q_Q12         18 17 15 QNPNS 2
+*
+* Device Models
+*
+*NPN TRANSISTOR
+.MODEL QNPNS NPN (IS     = 2.094763E-16
++ BF     = 100
++ NF     = 1
++ VAF    = 317
++ RB     = 450
++ CJC    = 1.9pF)
+*
+*
+*PNP TRANSISTOR
+.MODEL QPNPS PNP (IS     = 1.271569E-16
++ BF     = 70
++ NF     = 1
++ VAF    = 125
++ RB     = 1.2k
++ CJC    = 0.5pF
++ KF     = 800e-18)
+*
+*DIODE
+.MODEL DCBN D (
++ IS=864.10E-18
++ N=1
++ RS=100
++ IKF=1.0405
++ CJO=194.00E-15)
+*
+.ENDS 4320_REFBUF-PTAT_THAT
+*
+*
+

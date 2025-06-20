@@ -5,9 +5,9 @@
 	(uuid "cc0d9b0a-e3f6-4cc9-b034-a6452c3ec274")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Barrel_Jack"
+		(symbol "Connector:Barrel_Jack_Switch"
 			(pin_names
-				(offset 1.016)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -20,7 +20,7 @@
 					)
 				)
 			)
-			(property "Value" "Barrel_Jack"
+			(property "Value" "Barrel_Jack_Switch"
 				(at 0 -5.08 0)
 				(effects
 					(font
@@ -46,7 +46,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "DC Barrel Jack"
+			(property "Description" "DC Barrel Jack with an internal switch"
 				(at 0 0 0)
 				(effects
 					(font
@@ -73,7 +73,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Barrel_Jack_0_1"
+			(symbol "Barrel_Jack_Switch_0_1"
 				(rectangle
 					(start -5.08 3.81)
 					(end 5.08 -3.81)
@@ -121,6 +121,18 @@
 						(type outline)
 					)
 				)
+				(polyline
+					(pts
+						(xy 1.27 -2.286) (xy 1.905 -1.651)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(rectangle
 					(start 3.683 3.175)
 					(end -3.302 1.905)
@@ -144,8 +156,20 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 1.27 0) (xy 1.27 -2.286) (xy 0.635 -1.651)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
-			(symbol "Barrel_Jack_1_1"
+			(symbol "Barrel_Jack_Switch_1_1"
 				(pin passive line
 					(at 7.62 2.54 180)
 					(length 2.54)
@@ -157,6 +181,24 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1986,6 +2028,12 @@
 		)
 	)
 	(junction
+		(at 104.14 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11764b19-a852-4ed6-a706-35ee1e9d7c7b")
+	)
+	(junction
 		(at 228.6 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2181,7 +2229,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 120.65) (xy 105.41 120.65)
+			(xy 102.87 120.65) (xy 104.14 120.65)
 		)
 		(stroke
 			(width 0)
@@ -2238,6 +2286,16 @@
 			(type default)
 		)
 		(uuid "2341bc6b-ab20-442e-90d8-56cee170efc7")
+	)
+	(wire
+		(pts
+			(xy 104.14 118.11) (xy 104.14 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29ccbb57-6da6-4a18-ab3b-32d3223bf50a")
 	)
 	(wire
 		(pts
@@ -2368,16 +2426,6 @@
 			(type default)
 		)
 		(uuid "6a6ba9e3-a19c-432b-8c21-8d8b72cc70d1")
-	)
-	(wire
-		(pts
-			(xy 74.93 86.36) (xy 74.93 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b6ab5f9-ed59-4063-85f8-da8ad14706eb")
 	)
 	(wire
 		(pts
@@ -2561,7 +2609,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 101.6) (xy 74.93 95.25)
+			(xy 74.93 91.44) (xy 74.93 101.6)
 		)
 		(stroke
 			(width 0)
@@ -2731,7 +2779,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 73.66) (xy 74.93 78.74)
+			(xy 74.93 73.66) (xy 74.93 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2891,6 +2939,16 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 118.11) (xy 104.14 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb81c198-e22d-4629-89e8-34d0605766c1")
+	)
+	(wire
+		(pts
 			(xy 217.17 139.7) (xy 212.09 139.7)
 		)
 		(stroke
@@ -2938,6 +2996,16 @@
 			(type default)
 		)
 		(uuid "f2d10dc3-29d0-4493-8428-a66e5dd2ba6b")
+	)
+	(wire
+		(pts
+			(xy 104.14 120.65) (xy 105.41 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6902b8b-b4e5-48b7-851d-7da894de94cf")
 	)
 	(wire
 		(pts
@@ -3099,7 +3167,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 229.5652 115.57 0)
 			(effects
 				(font
@@ -3126,6 +3194,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "791-1206X226K100CT"
+			(at 228.6 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9ef38a6a-eb88-498a-8ed3-a7723423ad76")
 		)
@@ -3143,16 +3220,16 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 74.93 82.55 0)
+		(at 74.93 87.63 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "060eadcb-eee4-4009-9557-1f90cccf5048")
 		(property "Reference" "C201"
-			(at 78.74 81.2799 0)
+			(at 71.12 86.3599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3160,8 +3237,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100u"
-			(at 78.74 83.8199 0)
+		(property "Value" "1u/50V"
+			(at 71.12 88.8999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3169,8 +3246,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 75.8952 86.36 0)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 73.9648 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3179,7 +3256,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 74.93 82.55 0)
+			(at 74.93 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3188,7 +3265,16 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 74.93 82.55 0)
+			(at 74.93 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRM155R61H105KE5D"
+			(at 74.93 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3725,6 +3811,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "81-GRM155R62A104KE4D"
+			(at 210.82 129.54 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "296296a9-11e1-4e38-b9e1-f8e80f06b968")
 		)
@@ -3963,6 +4058,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Barrel_Jack_Switch")
+		(at 95.25 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "385f2e2b-f3c3-450f-ad52-029800ac212c")
+		(property "Reference" "J202"
+			(at 95.25 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Barrel_Jack_Switch"
+			(at 95.25 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "STEVEannouncer:Barrel Jack"
+			(at 96.52 119.126 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 96.52 119.126 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "DC Barrel Jack with an internal switch"
+			(at 95.25 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "502-L721RALP"
+			(at 95.25 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e042959-1254-4fae-9ef0-62c8a39e6bcd")
+		)
+		(pin "3"
+			(uuid "a621d906-f5c1-4fce-99f6-6cdfe7e5d1d3")
+		)
+		(pin "2"
+			(uuid "3e536b1c-7666-495b-9960-978a18f2289b")
+		)
+		(instances
+			(project ""
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/eebf1098-e67c-4d58-86f4-2b87a99f6ef8"
+					(reference "J202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 228.6 116.84 0)
 		(unit 1)
@@ -4056,7 +4231,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 181.9148 110.49 0)
 			(effects
 				(font
@@ -4075,6 +4250,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 182.88 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRT188R61H225KE3D"
 			(at 182.88 106.68 0)
 			(effects
 				(font
@@ -4126,7 +4310,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 181.9148 143.51 0)
 			(effects
 				(font
@@ -4145,6 +4329,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 182.88 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRT188R61H225KE3D"
 			(at 182.88 139.7 0)
 			(effects
 				(font
@@ -4262,7 +4455,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
 			(at 229.5652 148.59 0)
 			(effects
 				(font
@@ -4281,6 +4474,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 228.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "791-1206X226K100CT"
 			(at 228.6 144.78 0)
 			(effects
 				(font
@@ -4441,15 +4643,15 @@
 	(symbol
 		(lib_id "Device:R")
 		(at 58.42 63.5 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "771dca76-1bd6-4f5b-9a7e-ea4e458129c1")
 		(property "Reference" "R201"
-			(at 60.96 62.2299 0)
+			(at 55.88 62.2299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4458,7 +4660,7 @@
 			)
 		)
 		(property "Value" "1Meg"
-			(at 60.96 64.7699 0)
+			(at 55.88 64.7699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4467,7 +4669,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 56.642 63.5 90)
+			(at 60.198 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4758,74 +4960,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Barrel_Jack")
-		(at 95.25 118.11 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "81658c39-4ffd-4ddb-802a-ce8ecbf500ca")
-		(property "Reference" "J201"
-			(at 95.25 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Barrel_Jack"
-			(at 95.25 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_BarrelJack:BarrelJack_Horizontal"
-			(at 96.52 119.126 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 96.52 119.126 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "DC Barrel Jack"
-			(at 95.25 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8181f4d0-c0af-4bec-a8a9-ca7c8631f418")
-		)
-		(pin "2"
-			(uuid "024880f2-33bc-4eb3-925b-b68c96c9db71")
-		)
-		(instances
-			(project "STEVEannouncer"
-				(path "/1a37937a-d840-40ca-a420-44780efca6fe/eebf1098-e67c-4d58-86f4-2b87a99f6ef8"
-					(reference "J201")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:-5V")
 		(at 228.6 151.13 180)
 		(unit 1)
@@ -5035,76 +5169,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 74.93 91.44 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9b2ae37a-3de0-4592-99a1-4d8259dbdcbf")
-		(property "Reference" "R204"
-			(at 77.47 90.1699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "20k"
-			(at 77.47 92.7099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 73.152 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 74.93 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 74.93 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "37e01ce9-3a9a-4cbe-b58c-f3e6bea2ab40")
-		)
-		(pin "2"
-			(uuid "695f4c22-bbba-47c9-95e0-8465d637feef")
-		)
-		(instances
-			(project ""
-				(path "/1a37937a-d840-40ca-a420-44780efca6fe/eebf1098-e67c-4d58-86f4-2b87a99f6ef8"
-					(reference "R204")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 194.31 106.68 270)
 		(unit 1)
@@ -5244,15 +5308,15 @@
 	(symbol
 		(lib_id "Device:R")
 		(at 58.42 87.63 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a6efb6b0-9563-453b-b502-cc0868c58b2c")
 		(property "Reference" "R202"
-			(at 60.96 86.3599 0)
+			(at 55.88 86.3599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5261,7 +5325,7 @@
 			)
 		)
 		(property "Value" "330k"
-			(at 60.96 88.8999 0)
+			(at 55.88 88.8999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5270,7 +5334,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 56.642 87.63 90)
+			(at 60.198 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5490,6 +5554,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 210.82 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRM155R62A104KE4D"
+			(at 210.82 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)

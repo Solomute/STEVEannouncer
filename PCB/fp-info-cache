@@ -1,4 +1,4 @@
-25689794734949457
+25768046439732557
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -94073,12 +94073,320 @@ rotary encoder illuminated switch vertical
 9
 8
 STEVEannouncer
+Barrel Jack
+
+
+0
+3
+3
+STEVEannouncer
 Inductor 3012
 
 
 0
+2
+2
+STEVEannouncer
+Pot
+
+
 0
+3
+3
+SamacSys_Parts
+172675-02YY
+172675-02YY
+Connector
 0
+2
+2
+SamacSys_Parts
+470531000
+47053-1000
+Connector
+0
+4
+4
+SamacSys_Parts
+476591102
+47659-1102-1
+Connector
+0
+22
+22
+SamacSys_Parts
+877159006
+87715-9006-1
+Connector
+0
+36
+36
+SamacSys_Parts
+1001878310200TLF
+10018783-10200TLF-2
+Connector
+0
+36
+36
+SamacSys_Parts
+BATHLD001
+BAT-HLD-001-1
+Battery
+0
+3
+3
+SamacSys_Parts
+BF998215
+SOT143
+Schottky Diode
+0
+4
+4
+SamacSys_Parts
+BGA6C40P2X3_88X123X62
+WCSP
+Power Supply
+0
+6
+6
+SamacSys_Parts
+BGA12C40P4X3_199X129X62
+YZ0012-C01
+Integrated Circuit
+0
+12
+12
+SamacSys_Parts
+DQA_R-PUSON-N10_
+DQA (R-PUSON-N10)
+Integrated Circuit
+0
+10
+10
+SamacSys_Parts
+F3311A7H121020E200
+F3311A7H121020E200-2
+Connector
+0
+22
+22
+SamacSys_Parts
+F3311A7H121024E200
+F3311A7H121024E200-1
+Connector
+0
+26
+26
+SamacSys_Parts
+G823J201240BHR
+G823J201240BHR-1
+Connector
+0
+19
+19
+SamacSys_Parts
+KC2520Z122880C1KX00
+KC2520Z12.2880C1KX00-2
+Crystal or Oscillator
+0
+4
+4
+SamacSys_Parts
+LMR36015ARNXR
+RNX0012A
+Integrated Circuit
+0
+12
+12
+SamacSys_Parts
+NE555DR
+D (R-PDSO-G8)
+Integrated Circuit
+0
+8
+8
+SamacSys_Parts
+PEC11R-4XXXF-NXXXX
+PEC11R-4xxxF-Nxxxx
+Undefined or Miscellaneous
+0
+5
+5
+SamacSys_Parts
+PTR9022015KA104
+PTR902-2015K-A104-2
+Variable Resistor
+0
+8
+8
+SamacSys_Parts
+QFN50P400X400X100-25N-D
+RGE0024B
+Integrated Circuit
+0
+25
+25
+SamacSys_Parts
+QFN50P900X900X100-65N-D
+RGC0064G-
+Integrated Circuit
+0
+65
+65
+SamacSys_Parts
+QFP50P900X900X120-49N
+PHP (S-PQFP-G48)_2
+Integrated Circuit
+0
+49
+49
+SamacSys_Parts
+RJMG2V1SLN12W5R
+RJMG2V1SLN12W5R-1
+Connector
+0
+15
+15
+SamacSys_Parts
+SHDR2W50P0X200_1X2_590X450X600P
+B2B-PH-K-S(LF)(SN)
+Connector
+0
+2
+2
+SamacSys_Parts
+SHDR2W50P0X200_1X3_590X450X600P
+B2B-PH-K-S(LF)(SN)
+Connector
+0
+3
+3
+SamacSys_Parts
+SHDR4W50P0X200_1X4_990X450X600P
+B4B-PH-K(LF)(SN)
+Connector
+0
+4
+4
+SamacSys_Parts
+SJ43516SMTTR
+SJ-43516-SMT-TR-2
+Connector
+0
+6
+6
+SamacSys_Parts
+SON50P300X200X60-9N
+USON 2x3x0.6-mm
+Integrated Circuit
+0
+9
+9
+SamacSys_Parts
+SON50P300X300X80-13N-D
+TPS63710DRRR
+Integrated Circuit
+0
+13
+13
+SamacSys_Parts
+SOP64P600X175-16N
+16 Pin QSOP
+Integrated Circuit
+0
+16
+16
+SamacSys_Parts
+SOP65P760X150-30N
+30pin VSOP--0
+Integrated Circuit
+0
+30
+30
+SamacSys_Parts
+SOT50P160X60-5N
+DRL (R-PDSO-N5)
+Integrated Circuit
+0
+5
+5
+SamacSys_Parts
+SOT65P210X110-5N
+74LVC1G07SE-7
+Undefined or Miscellaneous
+0
+5
+5
+SamacSys_Parts
+SOT65P210X110-6N
+SOT-363
+Diode
+0
+6
+6
+SamacSys_Parts
+SOT95P280X145-6N
+SOT-23 - 1.45 mm max height
+Integrated Circuit
+0
+6
+6
+SamacSys_Parts
+SOTFL50P160X60-6N
+TPS563203DRLR
+Integrated Circuit
+0
+6
+6
+SamacSys_Parts
+TPS63700DRCR
+TPS63700DRCR-4
+Integrated Circuit
+0
+15
+15
+SamacSys_Parts
+TPS74901DRCR
+DRC0010J
+Integrated Circuit
+0
+15
+11
+SamacSys_Parts
+TS046655BK260SMT
+TS04-66-55-BK-260-SMT-2
+Switch
+0
+4
+4
+SamacSys_Parts
+UE78A11180062H
+UE78A11180062H-1
+Connector
+0
+40
+21
+SamacSys_Parts
+USB1086GFB
+USB1086-GF-B-3
+Connector
+0
+11
+11
+SamacSys_Parts
+USB480003A
+USB4800-03-A-1
+Connector
+0
+16
+16
+SamacSys_Parts
+XRCGB24M000F2C01R0
+XRCGB24M000F2C01R0
+Crystal or Oscillator
+0
+4
+4
 Sensor
 ASAIR_AM2302_P2.54mm_Lead2.75mm_TabDown
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/AM2302.pdf

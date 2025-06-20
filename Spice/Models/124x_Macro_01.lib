@@ -1,0 +1,171 @@
+* ======================================================================== 
+* THAT 124x series P,S packages
+* REV 00 - created on 09/17/2004, by FF
+* Rev 01 - created on 06/30/2017, by RB
+* Generates parts THAT1240, THAT1243, and THAT1246
+* Changed pin names to match datasheet
+*
+*
+*
+* DEVICE=THAT1240 P,S 0dB gain Line receiver
+* THAT1240 "macromodel" created on 09/17/2004, by FF
+*
+* connections:    non-inverting input
+*                 |   inverting input
+*                 |   |   positive power supply
+*                 |   |   |   negative power supply
+*                 |   |   |   |   output
+*                 |   |   |   |   |   Ref voltage or GND
+*                 |   |   |   |   |   |   sense
+*                 |   |   |   |   |   |   |
+.subckt THAT1240 In+ In- V+ V- Out Ref Sens
+*
+R_R1         In+ 40  9000  
+R_R3         In- 50  9000  
+R_R4         50 Sens  9000.5692  
+R_R2         40 Ref  9000  
+D_D13         Sens V+ DPROT 
+D_D11         Out V+ DPROT 
+D_D9         Ref V+ DPROT 
+D_D2         10 In+ DPROT 
+D_D1         10 V+ DPROT 
+D_D4         11 In- DPROT 
+D_D3         11 V+ DPROT 
+D_D7         13 In- DPROT 
+D_D5         12 In+ DPROT 
+D_D8         13 V- DPROT 
+D_D6         12 V- DPROT 
+D_D10         V- Ref DPROT 
+D_D12         V- Out DPROT 
+D_D14         V- Sens DPROT 
+X_U1         40 50 V+ V- Out OA_33X36706
+.ends
+*$
+* ========================================================================
+* DEVICE=THAT1243 P,S -3dB gain Line receiver
+* THAT1243 "macromodel" created on 09/17/2004, by FF
+*
+* connections:    non-inverting input
+*                 |   inverting input
+*                 |   |   positive power supply
+*                 |   |   |   negative power supply
+*                 |   |   |   |   Output
+*                 |   |   |   |   |   Ref voltage or GND
+*                 |   |   |   |   |   |   sense
+*                 |   |   |   |   |   |   |
+.subckt THAT1243 In+ In- V+ V- Out Ref Sens
+*
+R_R1         In+ 40  10500  
+R_R3         In- 50  10500  
+R_R4         50 Sens  7500.405  
+R_R2         40 Ref  7500  
+D_D13         Sens V+ DPROT 
+D_D11         Out V+ DPROT 
+D_D9         Ref V+ DPROT 
+D_D2         10 In+ DPROT 
+D_D1         10 V+ DPROT 
+D_D4         11 In- DPROT 
+D_D3         11 V+ DPROT 
+D_D7         13 In- DPROT 
+D_D5         12 In+ DPROT 
+D_D8         13 V- DPROT 
+D_D6         12 V- DPROT 
+D_D10         V- Ref DPROT 
+D_D12         V- Out DPROT 
+D_D14         V- Sens DPROT 
+X_U1         40 50 V+ V- Out OA_33X36706
+.ends
+*$
+* ========================================================================
+* DEVICE=THAT1246 P,S -6dB gain Line receiver
+* THAT1246 "macromodel" created on 09/17/2004, by FF
+*
+* connections:    non-inverting input
+*                 |   inverting input
+*                 |   |   positive power supply
+*                 |   |   |   negative power supply
+*                 |   |   |   |   Output
+*                 |   |   |   |   |   Ref voltage or GND
+*                 |   |   |   |   |   |   sense
+*                 |   |   |   |   |   |   |
+.subckt THAT1246 In+ In- V+ V- Out Ref Sens
+*
+R_R1         In+ 40  12k  
+R_R3         In- 50  12k  
+R_R4         50 Sens  6000.285  
+R_R2         40 Ref  6k  
+D_D13         Sens V+ DPROT 
+D_D11         Out V+ DPROT 
+D_D9         Ref V+ DPROT 
+D_D2         10 In+ DPROT 
+D_D1         10 V+ DPROT 
+D_D4         11 In- DPROT 
+D_D3         11 V+ DPROT 
+D_D7         13 In- DPROT 
+D_D5         12 In+ DPROT 
+D_D8         13 V- DPROT 
+D_D6         12 V- DPROT 
+D_D10         V- Ref DPROT 
+D_D12         V- Out DPROT 
+D_D14         V- Sens DPROT 
+X_U1         40 50 V+ V- Out OA_33X36706
+.ends
+*$
+* ========================================================================
+* DEVICE=OA_33X36706,OPAMP,PNP,INT
+* OA_33X36706 operational amplifier "macromodel" subcircuit for THAT124x series
+* created using Parts release 8.0 on 09/16/2004 by FF
+* Parts is a MicroSim product.
+*
+* connections:      non-inverting input
+*                   | inverting input
+*                   | | positive power supply
+*                   | | | negative power supply
+*                   | | | | Output
+*                   | | | | |
+.subckt OA_33X36706 1 2 3 4 5
+*
+   c1   11 12 285.31E-15
+  c2    6  7 12.100E-12
+  dc    5 53 dy
+  de   54  5 dy
+  dlp  90 91 dx
+  dln  92 90 dx
+  dp    4  3 dx
+  egnd 99  0 poly(2) (3,0) (4,0) 0 .5 .5
+  fb    7 99 poly(5) vb vc ve vlp vln 0 504.64E3 -1E3 1E3 500E3 -500E3
+  ga    6  0 11 12 1.1632E-3
+  gcm   0  6 10 99 1.1632E-9
+  iee   3 10 dc 147.60E-6
+  hlim 90  0 vlim 1K
+  q1   11  2 13 qx1
+  q2   12  1 14 qx2
+  r2    6  9 100.00E3
+  rc1   4 11 859.69
+  rc2   4 12 859.69
+  re1  13 10 495.25
+  re2  14 10 495.25
+  ree  10 99 1.3550E6
+  ro1   8  5 27
+  ro2   7 99 27
+  rp    3  4 16.185E3
+  vb    9  0 dc 0
+  vc    3 53 dc 2.8037
+  ve   54  4 dc 2.8037
+  vlim  7  8 dc 0
+  vlp  91  0 dc 25
+  vln   0 92 dc 25
+.model dx D(Is=800.00E-18)
+.model dy D(Is=800.00E-18 Rs=1m Cjo=10p)
+.model qx1 PNP(Is=800.00E-18 Bf=60.500)
+.model qx2 PNP(Is=800.0000E-18 Bf=60.500)
+.ends
+*$
+* THAT124x models end here
+*$
+* ========================================================================
+* Protection diode model for THAT124x and THAT120x series
+*
+.MODEL DPROT D (IS=864.10E-18 RS=100 CJO=194.00E-15 M=.42945 BV=60 IBV=1E-10)
+*$
+*

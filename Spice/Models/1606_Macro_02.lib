@@ -1,0 +1,163 @@
+* This information is protected under the United States copyright
+* laws. THAT Corporation ("THAT") hereby grants users of this
+* macromodel (the "User"), a nonexclusive, nontransferable
+* license to use this macromodel as long as the licensee abides
+* by the terms of this agreement.  Before using the macromodel,
+* the User should read this license.  If the User does not accept
+* these terms, the macromodel contained herein should be erased,
+* destroyed or returned to THAT within 30 days.
+*
+* The User may copy and distribute, at no charge, verbatim copies
+* of the Macromodel as contained herein, in any medium, provided
+* that the User conspicuously publishes on each copy this copyright
+* notice and disclaimer of warranty.  The User may modify this
+* macromodel to suit his or her specific applications, and the User
+* may make copies of the modified macromodel for use within his or
+* her company only, and provided the modified files carry prominent
+* notices stating that the files have been changed, and the date of
+* any changes.
+*
+* This macromodel is provided "AS IS, WHERE IS, AND WITH NO WARRANTY
+* OF ANY KIND EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED
+* TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+* PARTICULAR PURPOSE."  In no event will THAT be liable for special,
+* collateral, incidental, or consequential damages in connection
+* with or arising out of the use of this macromodel.  THAT reserves
+* the right to make changes to the products and macromodel without
+* prior notice.
+* ========================================================================
+* THAT1606 Floating Balanced Line Driver MACROMODEL
+* Rev. 00 8-21-2012
+* Model by GKH
+* Rev 01 8-212014 JBL
+* Changed name to THAT1606
+* Changed node names to match data sheet
+* Rev 02 RB 6-15-17
+* Changed Vcc and Vee to V+ and V-
+*
+* CONNECTIONS:
+*	            OUT-
+*	             |     CAP1
+*	             |      |     GND
+*	             |      |      |      IN-
+*                |      |      |      |     IN+
+* 	             |      |      |      |      |     Vee
+* 	             |      |      |      |      |      |     Vcc
+*	             |      |      |      |      |      |      |     CAP2
+*	             |      |      |      |      |      |      |      |     OUT+
+*  	             |      |      |      |      |      |      |      |      |
+.SUBCKT THAT1606    Out-   Cap1   Gnd    In-    In+     V-     V+    Cap2   Out+
+*
+Q_Q1         114 9 111 QP 1
+D_D2         9 10 DC 1
+D_D1         9 10 DC 1
+D_D9         23 25 DC 1
+D_D10        26 23 DC 1
+D_D5         19 16 DC 1
+D_D6         16 20 DC 1
+Q_Q3         42 37 39 QN 1
+R_R1         In+ 9  5k
+R_R5         32 Out-  25
+R_R6         31 Out+  25
+R_R8         31 37  10k
+R_R9         Gnd Out-  10k
+R_R10        Out+ Gnd  10k
+C_C2         115 114  4.25pF
+R_R19        0 16  1.82e9
+C_C3         0 16  5.5pF
+G_G3         23 0 16 0 -1e-6
+C_C5         0 23  2e-15
+R_R21        0 23  1Meg
+L_L1         29 31  160nH
+L_L2         30 32  160nH
+R_R27        41 39  1.8k
+R_R31        0 44  750k
+G_G15        16 0 44 0 438.6e-6
+G_G1         16 0 114 115 657.9e-6
+R_R15        111 113  1k
+R_R16        112 113  1k
+R_R7         37 32  10.0009k
+D_D16        V- 35 DC 1
+D_D15        V- 36 DC 1
+R_R26        V- 30  38
+I_I2         41 V- DC 110uA
+V_V4         21 V- 2.71V
+R_R17        V- 114  1.52k
+R_R18        V- 115  1.52k
+G_G5         29 V- 23 V- -0.026316
+G_G11        34 V- 29 23 0.026316
+G_G9         33 V- 23 29 0.026316
+D_D18        V- 33 DC 1
+D_D17        V- 34 DC 1
+R_R24        V- 29  38
+V_V2         19 V- 2.71V
+R_R2         In- 18  5k
+Q_Q2         115 10 112 QP 1
+C_C44        113 V+  0.2pF
+D_D13        V+ 33 DC 1
+D_D14        V+ 34 DC 1
+G_G7         V+ 29 V+ 23 -0.026316
+R_R23        29 V+  38
+V_V1         V+ 20 2.65V
+I_I7         V+ 113 DC 100uA
+R_R155       113 V+  1.5e9
+D_D11        V+ 35 DC 1
+D_D12        V+ 36 DC 1
+R_R25        30 V+  38
+V_V3         V+ 22 2.65V
+I_Isy        V+ V- DC 4.7mA
+D_D4         17 22 DC 1
+D_D3         1 17 DC 1
+G_G14         17 0 44 0 438.6e-6
+C_C4         0 17  5.5pF
+G_G2         17 0 115 114 657.9e-6
+R_R20        0 17  1.82e9
+G_G10        35 V- 24 30 0.026316
+D_D8         28 24 DC 1
+G_G8         V+ 30 V+ 24 -0.026316
+D_D7         24 27 DC 1
+G_G6         30 V- 24 V- -0.026316
+R_R22        0 24  1Meg
+G_G4         24 0 17 0 -1e-6
+C_C6         0 24  2e-15
+G_G12        36 V- 30 24 0.026316
+R_R3         9 32  10.005k
+R_R4         18 31  9.995k
+V_Vos        10 18 1.33mV
+C_C46        16 46  5.5pF
+R_R32        46 44  2.28k
+C_C43        17 47  5.5pF
+R_R33        47 44  2.28k
+Q_Q4         43 45 40 QN 1
+R_R28        41 40  1.8k
+R_R30        43 V+  2.28k
+R_R160       48 43  4.6k
+G_G13        44 0 42 43 438.6e-6
+C_C40        48 42  9.25pF
+R_R29        42 V+  2.28k
+D_D19        V- V+ DC 1
+V_V7         27 30 .75V
+V_V8         30 28 .75V
+V_V5         25 29 .75V
+V_V6         29 26 .75V
+C_C1         Gnd Cap1  9pF
+R_R13        Gnd Out-  20k
+R_R11        Cap1 Out-  10k
+R_R14        Out+ Gnd  20k
+R_R12        Out+ Cap1  10k
+I_Ibcc       V+ Cap2 DC 38nA
+V_Voscm      45 Cap2 -.378mV
+*
+*  Devices for 1646 Macromodel
+****************************************************************************
+* NPN TRANSISTOR
+.MODEL QN NPN (IS=2E-16 BF=1375 RB = 3k)
+*
+* PNP TRANSISTOR
+.MODEL QP PNP (IS=1.3e-16 BF=75	RB=700 KF=100e-18 AF=1)
+*
+* DIODE
+.MODEL DC D (IS=1.0E-15 BV=50)
+*
+.ENDS
+* ========================================================================
