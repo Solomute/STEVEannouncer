@@ -4615,6 +4615,12 @@
 		(uuid "2ef49a45-66b5-46c1-93c4-4fa2583e1dda")
 	)
 	(junction
+		(at 34.29 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2fa6131f-9df6-44c9-8de7-18197df1d994")
+	)
+	(junction
 		(at 74.93 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5044,16 +5050,6 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 57.15) (xy 43.18 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2c380cd7-fe3a-48b1-a632-9ecf50be0749")
-	)
-	(wire
-		(pts
 			(xy 93.98 130.81) (xy 93.98 135.89)
 		)
 		(stroke
@@ -5154,16 +5150,6 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 44.45) (xy 25.4 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34ac76b7-6a43-480f-8205-74a0ea2646d9")
-	)
-	(wire
-		(pts
 			(xy 215.9 83.82) (xy 217.17 83.82)
 		)
 		(stroke
@@ -5221,6 +5207,16 @@
 			(type default)
 		)
 		(uuid "3d758e27-75b5-45c3-9272-d646b133d8b0")
+	)
+	(wire
+		(pts
+			(xy 24.13 24.13) (xy 26.67 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3db245bd-bf82-4d90-9460-098252fa207b")
 	)
 	(wire
 		(pts
@@ -5324,13 +5320,13 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 24.13) (xy 43.18 24.13)
+			(xy 40.64 57.15) (xy 43.18 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4e8bb041-2598-4dd3-b64e-97f0ee143d1e")
+		(uuid "511b1d07-0c96-4e47-8128-c27351e98f6d")
 	)
 	(wire
 		(pts
@@ -5754,26 +5750,6 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 24.13) (xy 52.07 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d9552ae-5d41-4d19-a6b1-02a15cd50cc0")
-	)
-	(wire
-		(pts
-			(xy 25.4 24.13) (xy 25.4 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7deaa778-1fa8-4e79-b7a0-38713d2bb0a7")
-	)
-	(wire
-		(pts
 			(xy 101.6 50.8) (xy 97.79 50.8)
 		)
 		(stroke
@@ -5781,6 +5757,16 @@
 			(type default)
 		)
 		(uuid "7e670ae7-23ac-4ef3-82d5-928ca740fd47")
+	)
+	(wire
+		(pts
+			(xy 30.48 57.15) (xy 33.02 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "804ea69e-ae5c-46a5-a71e-b39d08176d83")
 	)
 	(wire
 		(pts
@@ -5844,7 +5830,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 40.64) (xy 49.53 40.64)
+			(xy 34.29 40.64) (xy 36.83 40.64)
 		)
 		(stroke
 			(width 0)
@@ -5934,7 +5920,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 24.13) (xy 52.07 40.64)
+			(xy 34.29 24.13) (xy 34.29 40.64)
 		)
 		(stroke
 			(width 0)
@@ -6261,6 +6247,16 @@
 			(type default)
 		)
 		(uuid "c5f89a1e-2a85-4ed4-9bff-b66da7e08193")
+	)
+	(wire
+		(pts
+			(xy 34.29 24.13) (xy 43.18 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c71fb787-99fe-48b1-91c1-c3ee6419316c")
 	)
 	(wire
 		(pts
@@ -6752,6 +6748,16 @@
 		)
 		(uuid "ff67f215-3e6d-4a87-a5c9-043fa938fa29")
 	)
+	(label "TBSel"
+		(at 162.56 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "21688a25-0325-4733-9df0-ded4597c7e2a")
+	)
 	(label "MicOut2"
 		(at 252.73 140.97 0)
 		(effects
@@ -6862,6 +6868,16 @@
 		)
 		(uuid "d9ccc58f-5b6a-4f21-88f0-2b40c5607343")
 	)
+	(label "MuteSel"
+		(at 160.02 161.29 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e380fd57-f19a-44ec-8cf8-cba8d8214b3d")
+	)
 	(label "MicOut"
 		(at 185.42 140.97 0)
 		(effects
@@ -6871,6 +6887,16 @@
 			(justify left bottom)
 		)
 		(uuid "ea334228-a726-4894-b74c-3f6566f59ea2")
+	)
+	(label "TBOut"
+		(at 181.61 101.6 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f1c80fe6-7cb8-4328-97b0-2ca5ebe90cac")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7936,7 +7962,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "20k"
 			(at 194.3099 83.82 0)
 			(effects
 				(font
@@ -8271,6 +8297,73 @@
 			(project "STEVEannouncer"
 				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
 					(reference "C315")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 30.48 57.15 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2519d184-d10f-4131-805b-f8c229d52711")
+		(property "Reference" "#PWR0342"
+			(at 24.13 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 26.67 57.1499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 30.48 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9c2af3b6-81b6-41e2-9827-91615acf3e86")
+		)
+		(instances
+			(project "STEVEannouncer"
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "#PWR0342")
 					(unit 1)
 				)
 			)
@@ -11081,6 +11174,7 @@
 	(symbol
 		(lib_id "Device:D_Bridge_-AA+")
 		(at 234.95 148.59 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11088,7 +11182,7 @@
 		(dnp no)
 		(uuid "78d29ade-b9e9-44d4-bb30-2cf68484f5a2")
 		(property "Reference" "D307"
-			(at 227.838 157.48 0)
+			(at 229.87 161.036 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11096,7 +11190,7 @@
 			)
 		)
 		(property "Value" "BAS3007ARPPE6327HTSA1"
-			(at 227.838 160.02 0)
+			(at 229.87 158.496 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12611,6 +12705,7 @@
 	(symbol
 		(lib_id "Device:D_Bridge_-AA+")
 		(at 62.23 138.43 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12618,7 +12713,7 @@
 		(dnp no)
 		(uuid "ab655373-7106-4413-8720-d18441538aeb")
 		(property "Reference" "D301"
-			(at 66.802 155.194 90)
+			(at 66.802 121.666 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12626,7 +12721,7 @@
 			)
 		)
 		(property "Value" "BAS3007ARPPE6327HTSA1"
-			(at 64.262 155.194 90)
+			(at 64.262 121.666 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13142,7 +13237,7 @@
 	(symbol
 		(lib_name "TMUX6236_1")
 		(lib_id "STEVEannouncer:TMUX6236")
-		(at 43.18 40.64 180)
+		(at 43.18 40.64 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13150,7 +13245,7 @@
 		(dnp no)
 		(uuid "b07dc410-1149-4c5f-9a30-b4c01a2be117")
 		(property "Reference" "U301"
-			(at 38.608 43.18 0)
+			(at 47.752 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13159,7 +13254,7 @@
 			)
 		)
 		(property "Value" "TMUX6236"
-			(at 38.608 45.72 0)
+			(at 47.752 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13168,7 +13263,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
-			(at 41.91 29.21 0)
+			(at 44.45 52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13178,7 +13273,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ts3a5223.pdf"
-			(at 41.91 27.305 0)
+			(at 44.45 53.975 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13188,7 +13283,7 @@
 			)
 		)
 		(property "Description" "Dual SPDT 0.45..0.85mΩ Bidirectional Analog switch, 1.65..3.6V supply, UQFN-10"
-			(at 41.91 25.146 0)
+			(at 44.45 56.134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13505,7 +13600,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 36.83 38.1 270)
+		(at 49.53 43.18 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13514,7 +13609,7 @@
 		(fields_autoplaced yes)
 		(uuid "c0296da6-c3d4-4af0-957b-90ea229e0e72")
 		(property "Reference" "#PWR0303"
-			(at 30.48 38.1 0)
+			(at 55.88 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13523,7 +13618,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 33.02 38.0999 90)
+			(at 53.34 43.1799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13532,7 +13627,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 38.1 0)
+			(at 49.53 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13541,7 +13636,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 38.1 0)
+			(at 49.53 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13550,7 +13645,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 36.83 38.1 0)
+			(at 49.53 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14068,6 +14163,73 @@
 			(project "STEVEannouncer"
 				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
 					(reference "R320")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 24.13 24.13 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce721565-0388-42d6-9402-efe21d7894ca")
+		(property "Reference" "#PWR0343"
+			(at 17.78 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 20.32 24.1299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 24.13 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "de7037d0-9bed-4d2d-92a4-21ee8514c5b0")
+		)
+		(instances
+			(project "STEVEannouncer"
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "#PWR0343")
 					(unit 1)
 				)
 			)
@@ -14805,7 +14967,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 25.4 40.64 0)
+		(at 36.83 57.15 270)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14814,7 +14976,7 @@
 		(dnp no)
 		(uuid "efc6ee93-c04c-499f-a7b3-fa605e5effd3")
 		(property "Reference" "C301"
-			(at 21.646 39.3699 0)
+			(at 35.5599 60.904 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14823,7 +14985,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 21.646 41.9099 0)
+			(at 38.0999 60.904 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14832,7 +14994,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 26.3652 36.83 0)
+			(at 33.02 56.1848 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14841,7 +15003,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 25.4 40.64 0)
+			(at 36.83 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14850,7 +15012,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 25.4 40.64 0)
+			(at 36.83 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14859,7 +15021,7 @@
 			)
 		)
 		(property "Mouser Part Number" "81-GRM155R62A104KE4D"
-			(at 25.4 40.64 0)
+			(at 36.83 57.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14877,6 +15039,85 @@
 			(project "STEVEannouncer"
 				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
 					(reference "C301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 30.48 24.13 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f2a9cd86-537f-4f3b-979f-38f2398ea616")
+		(property "Reference" "C322"
+			(at 29.2099 27.884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100n"
+			(at 31.7499 27.884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 26.67 23.1648 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 30.48 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 30.48 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRM155R62A104KE4D"
+			(at 30.48 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1014e0a0-a2da-4baa-80e9-ca8bf9cb3672")
+		)
+		(pin "1"
+			(uuid "70e85988-234d-4e30-a34b-cee4b92e1890")
+		)
+		(instances
+			(project "STEVEannouncer"
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "C322")
 					(unit 1)
 				)
 			)
