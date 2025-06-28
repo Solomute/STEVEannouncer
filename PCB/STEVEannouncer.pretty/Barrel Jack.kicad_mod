@@ -101,4 +101,15 @@
 		(uuid "0cd45d56-8340-4752-8755-c1c7108326d5")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/STEVEannouncer.pretty/L721RALP.stp"
+		(offset
+			(xyz 0 -9.125 5.8)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -180 -90)
+		)
+	)
 )
