@@ -4717,6 +4717,12 @@
 		(uuid "77adb595-e3b6-4376-b655-c715c971ffc6")
 	)
 	(junction
+		(at 170.18 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83a73b1f-a15d-4af6-a24c-4f567b2ace26")
+	)
+	(junction
 		(at 158.75 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4831,6 +4837,12 @@
 		(uuid "f5cebea9-39fc-4222-8bd4-7bf0e3120dab")
 	)
 	(junction
+		(at 170.18 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f60c5ad9-6d9f-4769-9f70-704a69d2cb7e")
+	)
+	(junction
 		(at 255.27 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4863,6 +4875,16 @@
 	(no_connect
 		(at 170.18 81.28)
 		(uuid "c401d4dc-ffe1-4872-9cdb-b7656578854e")
+	)
+	(wire
+		(pts
+			(xy 170.18 119.38) (xy 170.18 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "005c8b0e-4371-41a1-9958-710585537984")
 	)
 	(wire
 		(pts
@@ -5856,7 +5878,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 114.3) (xy 170.18 130.81)
+			(xy 170.18 114.3) (xy 170.18 119.38)
 		)
 		(stroke
 			(width 0)
@@ -6814,6 +6836,16 @@
 		)
 		(uuid "4db2bee4-024f-4fd0-a575-8359d25b3d37")
 	)
+	(label "TB_OUT2"
+		(at 259.08 43.18 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6cec7870-1869-4e90-a3ca-4913c9419b22")
+	)
 	(label "MicOut3"
 		(at 259.08 156.21 0)
 		(effects
@@ -6853,6 +6885,16 @@
 			(justify left bottom)
 		)
 		(uuid "c05c37a4-2cd8-4b96-8332-a12cadb2c049")
+	)
+	(label "TB_OUT3"
+		(at 259.08 58.42 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c922988e-1275-451e-bd80-92e127079e36")
 	)
 	(label "MicOut+"
 		(at 222.25 140.97 0)
@@ -11188,6 +11230,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 173.99 119.38 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "733d998f-4a20-44a5-912f-250df724092a")
+		(property "Reference" "C323"
+			(at 173.99 111.76 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 173.99 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 170.18 118.4148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 173.99 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 173.99 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRM155R62A104KE4D"
+			(at 173.99 119.38 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4d5eec28-56b3-4eef-98c3-6a5e89dba329")
+		)
+		(pin "1"
+			(uuid "6aa090d0-4722-4a64-ae59-d1e09852beec")
+		)
+		(instances
+			(project "STEVEannouncer"
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "C323")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Bridge_-AA+")
 		(at 234.95 148.59 0)
 		(mirror x)
@@ -12205,6 +12324,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 177.8 161.29 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "982ed397-4dd9-4443-bd40-e1231bb0093a")
+		(property "Reference" "#PWR0345"
+			(at 184.15 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 161.2899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e69f4fd7-b1db-4ee1-b964-cfccd9556661")
+		)
+		(instances
+			(project "STEVEannouncer"
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "#PWR0345")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D_Zener")
 		(at 68.58 35.56 270)
 		(unit 1)
@@ -12432,6 +12618,73 @@
 			(project ""
 				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
 					(reference "C304")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 177.8 119.38 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9f08c54f-f115-44c4-ab76-e12a8b3005fd")
+		(property "Reference" "#PWR0344"
+			(at 184.15 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 119.3799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 177.8 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 177.8 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f1164b9-d327-4fbd-8fd5-a07327c3dd5a")
+		)
+		(instances
+			(project "STEVEannouncer"
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "#PWR0344")
 					(unit 1)
 				)
 			)
@@ -14111,6 +14364,83 @@
 			(project ""
 				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
 					(reference "R306")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 173.99 161.29 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cc75d5e3-079d-42fa-92ec-8db33708c1cd")
+		(property "Reference" "C324"
+			(at 173.99 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 173.99 156.21 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 170.18 160.3248 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 173.99 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 173.99 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "81-GRM155R62A104KE4D"
+			(at 173.99 161.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "bc173831-0c9d-40a5-ae20-70ffabd4dc54")
+		)
+		(pin "1"
+			(uuid "85a5e6dc-0e77-43dc-a432-aa9aa3d12654")
+		)
+		(instances
+			(project "STEVEannouncer"
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "C324")
 					(unit 1)
 				)
 			)
