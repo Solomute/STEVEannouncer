@@ -9622,7 +9622,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "Plastic Nut"
 			(at 255.27 118.11 0)
 			(effects
 				(font
@@ -11306,7 +11306,7 @@
 				)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "NC3FAH2"
 			(at 34.29 69.85 0)
 			(effects
 				(font
@@ -12061,7 +12061,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "Plastic Nut"
 			(at 255.27 90.17 0)
 			(effects
 				(font
