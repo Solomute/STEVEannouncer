@@ -5178,7 +5178,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SON:Texas_S-PVSON-N10_ThermalVias"
+		(property "Footprint" "STEVEannouncer:OPA1622"
 			(at 161.29 133.35 0)
 			(effects
 				(font
@@ -5187,7 +5187,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa1622.pdf"
+		(property "Datasheet" ""
 			(at 161.29 123.19 0)
 			(effects
 				(font
@@ -5196,7 +5196,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "High-Fidelity, Bipolar-Input, Audio Operational Amplifier, VSON-10"
+		(property "Description" ""
 			(at 161.29 123.19 0)
 			(effects
 				(font
@@ -8056,7 +8056,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SON:Texas_S-PVSON-N10_ThermalVias"
+		(property "Footprint" "STEVEannouncer:OPA1622"
 			(at 161.29 85.09 0)
 			(effects
 				(font
@@ -8065,7 +8065,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa1622.pdf"
+		(property "Datasheet" ""
 			(at 161.29 74.93 0)
 			(effects
 				(font
@@ -8074,7 +8074,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "High-Fidelity, Bipolar-Input, Audio Operational Amplifier, VSON-10"
+		(property "Description" ""
 			(at 161.29 74.93 0)
 			(effects
 				(font
@@ -10204,7 +10204,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SON:Texas_S-PVSON-N10_ThermalVias"
+		(property "Footprint" "STEVEannouncer:OPA1622"
 			(at 270.51 43.18 0)
 			(effects
 				(font
@@ -10213,7 +10213,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa1622.pdf"
+		(property "Datasheet" ""
 			(at 270.51 33.02 0)
 			(effects
 				(font
@@ -10222,7 +10222,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "High-Fidelity, Bipolar-Input, Audio Operational Amplifier, VSON-10"
+		(property "Description" ""
 			(at 270.51 33.02 0)
 			(effects
 				(font
@@ -10375,7 +10375,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_SON:WSON-8-1EP_3x3mm_P0.5mm_EP1.2x2mm_ThermalVias"
+		(property "Footprint" "STEVEannouncer:WSON-8-1EP_3x3mm_P0.5mm_EP1.2x2mm_ThermalVias"
 			(at 232.41 33.02 0)
 			(effects
 				(font
@@ -10550,7 +10550,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SON:WSON-8-1EP_3x3mm_P0.5mm_EP1.2x2mm_ThermalVias"
+		(property "Footprint" "STEVEannouncer:WSON-8-1EP_3x3mm_P0.5mm_EP1.2x2mm_ThermalVias"
 			(at 106.68 144.78 0)
 			(effects
 				(font
@@ -10727,7 +10727,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SON:WSON-8-1EP_3x3mm_P0.5mm_EP1.2x2mm_ThermalVias"
+		(property "Footprint" "STEVEannouncer:WSON-8-1EP_3x3mm_P0.5mm_EP1.2x2mm_ThermalVias"
 			(at 106.68 93.98 0)
 			(effects
 				(font
