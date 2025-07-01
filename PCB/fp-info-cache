@@ -1,4 +1,4 @@
-25709058534171044
+25714312582552502
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -94080,6 +94080,13 @@ Barrel Jack
 3
 3
 STEVEannouncer
+CPG1316S01D02_kailhspecsheet_mikefive
+
+
+0
+6
+3
+STEVEannouncer
 CherrySwitch
 Cherry MX keyswitch, 1.00u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
 Cherry MX keyswitch 1.00u PCB
@@ -94093,6 +94100,13 @@ Inductor 3012
 0
 2
 2
+STEVEannouncer
+Low-Profile-Choc-MX
+
+
+0
+5
+4
 STEVEannouncer
 Mousebites
 
@@ -94126,7 +94140,7 @@ OPA1622
 3x3mm Body, 0.5mm Pitch, S-PVSON-N10, DRC, http://www.ti.com/lit/ds/symlink/tps61201.pdf
 0.5 S-PVSON-N10 DRC
 0
-39
+25
 11
 STEVEannouncer
 Pot
@@ -94142,6 +94156,13 @@ SOT TO_SOT_SMD
 0
 6
 6
+STEVEannouncer
+SW_choc_v1_1u
+Footprint for Kailh Choc style switches
+
+0
+2
+2
 STEVEannouncer
 Untitled
 

@@ -551,7 +551,7 @@
       "plot": "Gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../Enclosure/PCB.step",
       "svg": "",
       "vrml": ""
     },
