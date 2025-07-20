@@ -1284,7 +1284,7 @@
 				)
 			)
 			(pin input line
-				(at 0 7.62 270)
+				(at -2.54 8.89 270)
 				(length 5.08)
 				(name "SYM"
 					(effects
@@ -1302,7 +1302,7 @@
 				)
 			)
 			(pin input line
-				(at 2.54 7.62 270)
+				(at 0 8.89 270)
 				(length 6.35)
 				(name "E+"
 					(effects
@@ -1320,7 +1320,7 @@
 				)
 			)
 			(pin input line
-				(at 2.54 -7.62 90)
+				(at 0 -8.89 90)
 				(length 6.35)
 				(name "E-"
 					(effects
@@ -1376,7 +1376,7 @@
 				)
 			)
 			(pin input line
-				(at 0 7.62 270)
+				(at -2.54 8.89 270)
 				(length 5.08)
 				(name "SYM"
 					(effects
@@ -1394,7 +1394,7 @@
 				)
 			)
 			(pin input line
-				(at 2.54 7.62 270)
+				(at 0 8.89 270)
 				(length 6.35)
 				(name "E+"
 					(effects
@@ -1412,7 +1412,7 @@
 				)
 			)
 			(pin input line
-				(at 2.54 -7.62 90)
+				(at 0 -8.89 90)
 				(length 6.35)
 				(name "E-"
 					(effects

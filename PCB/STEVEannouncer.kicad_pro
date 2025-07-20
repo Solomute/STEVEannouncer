@@ -557,7 +557,7 @@
       "idf": "",
       "netlist": "",
       "plot": "Gerbers/",
-      "pos_files": "Gerbers",
+      "pos_files": "Components/",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
@@ -567,7 +567,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "Components\\STEVEannouncer.csv",
+    "bom_export_filename": "STEVEannouncer BOM.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
