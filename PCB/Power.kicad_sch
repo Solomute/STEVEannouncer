@@ -3393,6 +3393,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
+			(at 212.09 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "78b8db37-516b-4d83-ada2-86aa70e28910")
 		)
@@ -3771,6 +3780,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
+			(at 212.09 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e8529870-4725-48f3-a97e-fb7585a2f66a")
 		)
@@ -3841,6 +3859,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
+			(at 74.93 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8222b87b-773b-4dd4-8465-c55302b667b4")
 		)
@@ -3902,6 +3929,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 144.78 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "708-RMCF0402FT1K00"
+			(at 144.78 67.31 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4895,6 +4931,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "652-CR0402-FX8062GLF"
+			(at 220.98 139.7 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5e5e9554-4ee7-4244-b107-8e7b24cd7f52")
 		)
@@ -5100,6 +5145,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-7W1ML"
+			(at 58.42 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "37e01ce9-3a9a-4cbe-b58c-f3e6bea2ab3f")
 		)
@@ -5170,6 +5224,15 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 154.94 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "859-LTST-C191KRKT"
 			(at 154.94 67.31 0)
 			(effects
 				(font
@@ -5973,6 +6036,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "652-CR1206-JW-100ELF"
+			(at 101.6 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ff302f74-bfe2-4a47-bfb6-a89e0b6516e4")
 		)
@@ -6035,6 +6107,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 58.42 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "603-RC0402FR-13330KL"
 			(at 58.42 87.63 0)
 			(effects
 				(font
@@ -6314,6 +6395,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 220.98 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR0402-FX8062GLF"
+			(at 220.98 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)

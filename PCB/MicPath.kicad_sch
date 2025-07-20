@@ -7939,6 +7939,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "708-RMCF0402FT1K00"
+			(at 207.01 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8a724b3a-61ec-431a-8088-4f0677867f43")
 		)
@@ -8001,6 +8010,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 74.93 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "708-RMCF0402FT1K00"
 			(at 74.93 132.08 0)
 			(effects
 				(font
@@ -8688,6 +8706,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
+			(at 193.04 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1c177720-6dd4-424e-90e7-819257073595")
 		)
@@ -8884,6 +8911,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 207.01 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "708-RMCF0402FT1K00"
 			(at 207.01 74.93 0)
 			(effects
 				(font
@@ -9239,6 +9275,15 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 256.54 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "791-0402N101K160CT"
 			(at 256.54 46.99 0)
 			(effects
 				(font
@@ -9874,6 +9919,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-13330KL"
+			(at 170.18 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "dfa033bb-6166-473f-9a9e-1013d47d75b9")
 		)
@@ -10165,6 +10219,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "791-0402N101K160CT"
+			(at 255.27 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e68b55a7-17db-48f8-ab43-baf3c313b818")
 		)
@@ -10312,6 +10375,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
+			(at 80.01 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0d942fc3-ffab-4d39-b61e-c8888f770ecc")
 		)
@@ -10374,6 +10446,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 158.75 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
 			(at 158.75 147.32 0)
 			(effects
 				(font
@@ -11188,6 +11269,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "568-NC3FAH-2"
+			(at 25.4 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "96acd967-1368-459d-bd3e-af86b9360319")
 		)
@@ -11254,6 +11344,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 269.24 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "568-NC3MAH"
 			(at 269.24 43.18 0)
 			(effects
 				(font
@@ -11463,6 +11562,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 167.64 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "603-RC0402FR-13330KL"
 			(at 167.64 153.67 0)
 			(effects
 				(font
@@ -11764,6 +11872,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "708-RMCF0402FT1K00"
+			(at 207.01 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1d46946e-2757-4783-9aa3-f66f0e50cd3b")
 		)
@@ -11968,6 +12085,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "791-0402N101K160CT"
+			(at 255.27 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9f229335-943b-4dbc-a368-675859e86e9d")
 		)
@@ -12095,6 +12221,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 220.98 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR0402FX-1000GLF"
+			(at 220.98 35.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12767,6 +12902,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
+			(at 158.75 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "43746882-631c-41c4-9fe0-a48bad00afa6")
 		)
@@ -12897,6 +13041,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 36.83 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "791-0402N101K160CT"
+			(at 36.83 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13127,6 +13280,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "80-C0402C471K5R"
+			(at 40.64 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cd6a2040-c2ce-400a-b3f3-b47bca03d2cf")
 		)
@@ -13188,6 +13350,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 57.15 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR1206-JW-100ELF"
+			(at 57.15 125.73 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13943,6 +14114,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "80-C0402C471K5R"
+			(at 40.64 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cd6a2040-c2ce-400a-b3f3-b47bca03d2d0")
 		)
@@ -14501,6 +14681,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 57.15 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR1206-JW-100ELF"
+			(at 57.15 151.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15833,6 +16022,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "791-0402N101K160CT"
+			(at 256.54 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "24817a46-353a-4428-a6a2-d2482a23872e")
 		)
@@ -15961,6 +16159,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 83.82 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "708-RMCF0402FT270R"
 			(at 83.82 134.62 0)
 			(effects
 				(font
@@ -16107,6 +16314,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 220.98 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR0402FX-1000GLF"
+			(at 220.98 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16411,6 +16627,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
+			(at 198.12 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9e544da8-3ee4-446e-93a8-3068c334336f")
 		)
@@ -16616,6 +16841,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 198.12 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
 			(at 198.12 97.79 0)
 			(effects
 				(font
@@ -16832,6 +17066,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 269.24 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "568-NC3MAH"
 			(at 269.24 140.97 0)
 			(effects
 				(font
@@ -17351,6 +17594,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "708-RMCF0402FT1K00"
+			(at 74.93 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "90a879ab-3826-4993-a836-7968b7b0d121")
 		)
@@ -17488,6 +17740,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "708-RMCF0402FT1K00"
+			(at 207.01 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0850d619-51f2-4303-a2c2-7f46480a640f")
 		)
@@ -17550,6 +17811,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 193.04 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "603-RC0402FR-1320KL"
 			(at 193.04 33.02 0)
 			(effects
 				(font
