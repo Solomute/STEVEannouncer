@@ -676,6 +676,148 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -5236,16 +5378,8 @@
 		(uuid "3035e637-3797-461a-8909-9beee56bf30b")
 	)
 	(no_connect
-		(at 144.78 81.28)
-		(uuid "417e0084-31d9-4024-99e8-78d7aeaa947b")
-	)
-	(no_connect
 		(at 153.67 165.1)
 		(uuid "c0236050-a7b5-40ad-92f2-ccb797d274b1")
-	)
-	(no_connect
-		(at 170.18 81.28)
-		(uuid "c401d4dc-ffe1-4872-9cdb-b7656578854e")
 	)
 	(wire
 		(pts
@@ -5369,6 +5503,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 76.2) (xy 111.76 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "156f16fb-f80e-4442-a9bc-73894ce991fb")
+	)
+	(wire
+		(pts
 			(xy 251.46 58.42) (xy 256.54 58.42)
 		)
 		(stroke
@@ -5399,7 +5543,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 72.39) (xy 170.18 72.39)
+			(xy 146.05 76.2) (xy 147.32 76.2)
 		)
 		(stroke
 			(width 0)
@@ -5549,7 +5693,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 72.39) (xy 144.78 72.39)
+			(xy 121.92 76.2) (xy 123.19 76.2)
 		)
 		(stroke
 			(width 0)
@@ -5739,6 +5883,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 78.74) (xy 118.11 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4502aa34-c437-4e4f-ae8f-779cd368c62e")
+	)
+	(wire
+		(pts
 			(xy 170.18 161.29) (xy 167.64 161.29)
 		)
 		(stroke
@@ -5879,7 +6033,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 72.39) (xy 157.48 76.2)
+			(xy 134.62 76.2) (xy 134.62 78.74)
 		)
 		(stroke
 			(width 0)
@@ -5949,16 +6103,6 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 76.2) (xy 144.78 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b9a37ea-fc1f-4cc2-8cf7-c39a7e0d6efe")
-	)
-	(wire
-		(pts
 			(xy 123.19 189.23) (xy 123.19 184.15)
 		)
 		(stroke
@@ -6016,26 +6160,6 @@
 			(type default)
 		)
 		(uuid "614053ac-5f0b-45bb-9109-a41d50436339")
-	)
-	(wire
-		(pts
-			(xy 132.08 72.39) (xy 133.35 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "621bbcaf-b865-4b69-8e3c-e89c04c5d69b")
-	)
-	(wire
-		(pts
-			(xy 144.78 72.39) (xy 144.78 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63eccc39-b05d-4dff-a515-9635ee8a5c63")
 	)
 	(wire
 		(pts
@@ -6109,7 +6233,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 76.2) (xy 170.18 76.2)
+			(xy 142.24 78.74) (xy 147.32 78.74)
 		)
 		(stroke
 			(width 0)
@@ -6179,7 +6303,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 72.39) (xy 157.48 72.39)
+			(xy 135.89 76.2) (xy 134.62 76.2)
 		)
 		(stroke
 			(width 0)
@@ -6749,6 +6873,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 76.2) (xy 110.49 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3aa47fa-5c65-4b92-9f11-38277740ed4a")
+	)
+	(wire
+		(pts
 			(xy 83.82 146.05) (xy 93.98 146.05)
 		)
 		(stroke
@@ -6836,6 +6970,16 @@
 			(type default)
 		)
 		(uuid "c08a7255-bd80-46ce-8b5c-354d60cd8c14")
+	)
+	(wire
+		(pts
+			(xy 123.19 76.2) (xy 123.19 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1bf539c-ba57-494b-b472-267feed3a9e6")
 	)
 	(wire
 		(pts
@@ -6939,7 +7083,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 76.2) (xy 162.56 76.2)
+			(xy 134.62 78.74) (xy 139.7 78.74)
 		)
 		(stroke
 			(width 0)
@@ -7009,16 +7153,6 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 76.2) (xy 132.08 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5902f62-855e-4532-ab3f-ca3577f90eb7")
-	)
-	(wire
-		(pts
 			(xy 255.27 156.21) (xy 269.24 156.21)
 		)
 		(stroke
@@ -7069,6 +7203,16 @@
 	)
 	(wire
 		(pts
+			(xy 110.49 78.74) (xy 115.57 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db943332-8cc8-47f5-baa0-9f45e3941bdd")
+	)
+	(wire
+		(pts
 			(xy 214.63 83.82) (xy 215.9 83.82)
 		)
 		(stroke
@@ -7116,16 +7260,6 @@
 			(type default)
 		)
 		(uuid "de53ad6c-0229-4e39-ac14-2161e451896c")
-	)
-	(wire
-		(pts
-			(xy 137.16 76.2) (xy 132.08 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "deca3b3d-2bd7-475b-bbd7-1ad6c25f0f6f")
 	)
 	(wire
 		(pts
@@ -7269,7 +7403,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 76.2) (xy 170.18 72.39)
+			(xy 147.32 78.74) (xy 147.32 76.2)
 		)
 		(stroke
 			(width 0)
@@ -7663,6 +7797,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 113.03 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "652-CR0402FX-1002GLF"
+			(at 113.03 189.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8389,24 +8532,6 @@
 			)
 		)
 		(property "Mouser Part Number" "621-DFLZ5V6-7"
-			(at 68.58 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part#" ""
-			(at 68.58 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Gearlabs Part Number" "D-Zener-5V6-123-2"
 			(at 68.58 48.26 0)
 			(effects
 				(font
@@ -10245,7 +10370,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPST")
-		(at 163.83 72.39 0)
+		(at 140.97 76.2 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10254,7 +10379,7 @@
 		(dnp no)
 		(uuid "45a25164-0b92-4a02-ba4d-c2475cd4e540")
 		(property "Reference" "SW302"
-			(at 163.83 66.04 0)
+			(at 140.97 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10262,7 +10387,7 @@
 			)
 		)
 		(property "Value" "SW_SPST"
-			(at 163.83 68.58 0)
+			(at 140.97 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10270,7 +10395,7 @@
 			)
 		)
 		(property "Footprint" "STEVEannouncer:SW_choc_v1_1u"
-			(at 163.83 72.39 0)
+			(at 140.97 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10279,7 +10404,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 163.83 72.39 0)
+			(at 140.97 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10288,7 +10413,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 72.39 0)
+			(at 140.97 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10297,7 +10422,7 @@
 			)
 		)
 		(property "Mouser Part Number" "540-MX1A-C1NN"
-			(at 163.83 72.39 0)
+			(at 140.97 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10743,52 +10868,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 104.14 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 104.14 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 104.14 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 104.14 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Mouser Part Number" "595-OPA1678IDRGR"
-			(at 104.14 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Gearlabs Part Number" "EXT-OPA1678"
 			(at 104.14 40.64 0)
 			(effects
 				(font
@@ -10806,22 +10886,6 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" ""
-			(at 104.14 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part#" ""
-			(at 104.14 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
 			(at 104.14 40.64 0)
 			(effects
 				(font
@@ -10919,52 +10983,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 207.01 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 207.01 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 207.01 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 207.01 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Mouser Part Number" "595-OPA1678IDRGR"
-			(at 207.01 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Gearlabs Part Number" "EXT-OPA1678"
 			(at 207.01 35.56 0)
 			(effects
 				(font
@@ -10982,22 +11001,6 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" ""
-			(at 207.01 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part#" ""
-			(at 207.01 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
 			(at 207.01 35.56 0)
 			(effects
 				(font
@@ -11094,52 +11097,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "${KICAD9_SYMBOL_DIR}/Simulation_SPICE.sp"
-			(at 207.01 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "kicad_builtin_opamp_dual"
-			(at 207.01 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 207.01 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=in1- 3=in1+ 4=vee 5=in2+ 6=in2- 7=out2 8=vcc"
-			(at 207.01 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Mouser Part Number" "595-OPA1678IDRGR"
-			(at 207.01 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Gearlabs Part Number" "EXT-OPA1678"
 			(at 207.01 83.82 0)
 			(effects
 				(font
@@ -11157,22 +11115,6 @@
 			)
 		)
 		(property "Manufacturer_Part_Number" ""
-			(at 207.01 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Part#" ""
-			(at 207.01 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser Price/Stock" ""
 			(at 207.01 83.82 0)
 			(effects
 				(font
@@ -11949,6 +11891,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "652-CR0402FX-1002GLF"
+			(at 132.08 189.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "af26e623-9df0-450d-894b-bc8be41d5d9a")
 		)
@@ -12461,6 +12412,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "80-C0402C471K5R"
+			(at 189.23 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9815700f-b30c-45ef-968e-0e7b9b2a00e1")
 		)
@@ -12494,7 +12454,7 @@
 				)
 			)
 		)
-		(property "Value" "BAS3007ARPPE6327HTSA1"
+		(property "Value" "BAS3007"
 			(at 229.87 158.496 0)
 			(effects
 				(font
@@ -13150,7 +13110,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPST")
-		(at 138.43 72.39 0)
+		(at 116.84 76.2 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13159,7 +13119,7 @@
 		(dnp no)
 		(uuid "89d1bfee-31b0-4612-8fc3-0f86d52f3742")
 		(property "Reference" "SW301"
-			(at 138.43 66.04 0)
+			(at 116.84 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13167,7 +13127,7 @@
 			)
 		)
 		(property "Value" "SW_SPST"
-			(at 138.43 68.58 0)
+			(at 116.84 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13175,7 +13135,7 @@
 			)
 		)
 		(property "Footprint" "STEVEannouncer:SW_choc_v1_1u"
-			(at 138.43 72.39 0)
+			(at 116.84 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13184,7 +13144,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 138.43 72.39 0)
+			(at 116.84 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13193,7 +13153,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 138.43 72.39 0)
+			(at 116.84 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13202,7 +13162,7 @@
 			)
 		)
 		(property "Mouser Part Number" "540-MX1A-C1NN"
-			(at 138.43 72.39 0)
+			(at 116.84 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13456,88 +13416,6 @@
 			(project "STEVEannouncer"
 				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
 					(reference "D306")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "STEVEannouncer:JST_B2B_PH")
-		(at 137.16 81.28 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8e9e85b2-9e6f-42ae-b4d7-fa2f583deeb0")
-		(property "Reference" "J302"
-			(at 134.62 82.5501 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x02"
-			(at 134.62 80.0101 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-SM4-TB_1x02-1MP_P2.00mm_Vertical"
-			(at 137.16 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 137.16 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 137.16 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "306-B2BPHSM4TBLFSN"
-			(at 137.16 81.28 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "57a12f22-4ae9-4adf-8d55-84d05595112b")
-		)
-		(pin "2"
-			(uuid "9a953850-dafc-430e-a4b0-5b7e8c96101b")
-		)
-		(pin "MP"
-			(uuid "ac021a44-d1e4-40a3-9819-ccd97faea2fc")
-		)
-		(instances
-			(project "STEVEannouncer"
-				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
-					(reference "J302")
 					(unit 1)
 				)
 			)
@@ -13959,24 +13837,6 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part#" ""
-			(at 68.58 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Gearlabs Part Number" "D-Zener-5V6-123-2"
-			(at 68.58 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(pin "2"
 			(uuid "16e2004a-297d-43b4-8f80-af9da79c9d84")
 		)
@@ -14273,88 +14133,6 @@
 		)
 	)
 	(symbol
-		(lib_id "STEVEannouncer:JST_B2B_PH")
-		(at 162.56 81.28 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a10c1432-c946-4435-a24b-9871e46a1702")
-		(property "Reference" "J305"
-			(at 167.64 80.0099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Conn_01x02"
-			(at 167.64 82.5499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_B2B-PH-SM4-TB_1x02-1MP_P2.00mm_Vertical"
-			(at 162.56 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 162.56 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 162.56 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "306-B2BPHSM4TBLFSN"
-			(at 162.56 81.28 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e6bf7c29-2f0e-47b6-b837-0592c254ed9f")
-		)
-		(pin "2"
-			(uuid "7986eb50-3264-499d-b6a0-49e69f462a65")
-		)
-		(pin "MP"
-			(uuid "9487ca0b-53dd-4910-9272-779f0ea17b81")
-		)
-		(instances
-			(project "STEVEannouncer"
-				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
-					(reference "J305")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 80.01 162.56 0)
 		(unit 1)
@@ -14570,7 +14348,7 @@
 				)
 			)
 		)
-		(property "Value" "BAS3007ARPPE6327HTSA1"
+		(property "Value" "BAS3007"
 			(at 64.262 121.666 90)
 			(effects
 				(font
@@ -14759,24 +14537,6 @@
 			)
 		)
 		(property "Description" "75V 0.15A Fast switching Diode, SOD-523"
-			(at 88.9 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 88.9 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
 			(at 88.9 148.59 0)
 			(effects
 				(font
@@ -15213,6 +14973,76 @@
 				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
 					(reference "U301")
 					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 118.11 83.82 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b2eac9f9-63f0-40a7-98c3-0e08dc8cdea1")
+		(property "Reference" "J302"
+			(at 120.65 82.5499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 120.65 85.0899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "STEVEannouncer:SolderWire-0.15sqmm_1x02_P4mm_D0.5mm_OD1.5mm"
+			(at 118.11 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 118.11 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 118.11 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b95f10f-cc04-42c6-9324-a135525262f4")
+		)
+		(pin "2"
+			(uuid "927c661b-86ce-4d5f-9a39-f4d835c285b7")
+		)
+		(instances
+			(project ""
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "J302")
+					(unit 1)
 				)
 			)
 		)
@@ -15789,6 +15619,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" "80-C0402C471K5R"
+			(at 173.99 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2174c659-c555-4fbc-a10e-e1613b83c06d")
 		)
@@ -15851,24 +15690,6 @@
 			)
 		)
 		(property "Description" "75V 0.15A Fast switching Diode, SOD-523"
-			(at 88.9 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 88.9 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
 			(at 88.9 128.27 0)
 			(effects
 				(font
@@ -16167,7 +15988,7 @@
 				(hide yes)
 			)
 		)
-		(property "Mouser Part Number" "708-RMCF0402FT270R"
+		(property "Mouser Part Number" "652-CR0402FX-1000GLF"
 			(at 83.82 134.62 0)
 			(effects
 				(font
@@ -16890,7 +16711,7 @@
 				)
 			)
 		)
-		(property "Value" "BAS3007ARPPE6327HTSA1"
+		(property "Value" "BAS3007"
 			(at 229.87 60.452 0)
 			(effects
 				(font
@@ -17225,6 +17046,15 @@
 				(hide yes)
 			)
 		)
+		(property "Mouser Part Number" " 595-OPA202IDBVR"
+			(at 120.65 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "03ce0239-58d9-475b-aa00-dc04acbf949a")
 		)
@@ -17534,6 +17364,76 @@
 			(project "STEVEannouncer"
 				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
 					(reference "#PWR0313")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 142.24 83.82 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f8a588b5-35f2-4802-b865-e7d151ece321")
+		(property "Reference" "J305"
+			(at 144.78 82.5499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Conn_01x02"
+			(at 144.78 85.0899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "STEVEannouncer:SolderWire-0.15sqmm_1x02_P4mm_D0.5mm_OD1.5mm"
+			(at 142.24 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 142.24 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 142.24 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "43646b77-cf4f-4660-8019-bb7494fba39d")
+		)
+		(pin "2"
+			(uuid "ad232187-8bab-4338-a420-2308dde4a916")
+		)
+		(instances
+			(project "STEVEannouncer"
+				(path "/1a37937a-d840-40ca-a420-44780efca6fe/ed5acf0b-c0f0-4ec2-837f-fd4292e4b1bc"
+					(reference "J305")
 					(unit 1)
 				)
 			)

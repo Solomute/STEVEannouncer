@@ -3,9 +3,9 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "9.0.2"
+      "Version": "9.0.3"
     },
-    "CreationDate": "2025-07-01T01:10:05-05:00"
+    "CreationDate": "2025-07-20T02:02:08-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
@@ -24,10 +24,10 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.15,
-      "PadToTrack": 0.15,
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
       "TrackToTrack": 0.2,
-      "MinLineWidth": 0.2,
+      "MinLineWidth": 0.15,
       "TrackToRegion": 0.2,
       "RegionToRegion": 0.2
     },
@@ -36,8 +36,8 @@
       "PadToPad": 0.0,
       "PadToTrack": 0.0,
       "TrackToTrack": 0.2,
-      "TrackToRegion": 0.2,
-      "RegionToRegion": 0.2
+      "TrackToRegion": 0.25,
+      "RegionToRegion": 0.25
     }
   ],
   "FilesAttributes": [
@@ -67,18 +67,8 @@
       "FilePolarity": "Positive"
     },
     {
-      "Path": "STEVEannouncer-B_Paste.gbr",
-      "FileFunction": "SolderPaste,Bot",
-      "FilePolarity": "Positive"
-    },
-    {
       "Path": "STEVEannouncer-F_Silkscreen.gbr",
       "FileFunction": "Legend,Top",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "STEVEannouncer-B_Silkscreen.gbr",
-      "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
     },
     {
